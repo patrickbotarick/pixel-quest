@@ -52,6 +52,13 @@ export function createGame(parent: HTMLElement): Phaser.Game {
       SettingsScene,
     ],
   });
+  // Opt-in development fixture for isolated browser regression tests.
+  // The production build removes this block; no user save is changed here.
+  const testHost = window as unknown as { __pqTestGame?: Phaser.Game };
+  if (import.meta.env.DEV && new URLSearchParams(window.location.search).get("qa") === "ui") {
+    testHost.__pqTestGame = game;
+    game.events.once("destroy", () => { delete testHost.__pqTestGame; });
+  }
   game.events.once("destroy", () => {
     const audio = game.registry.get("audio") as { dispose?: () => void } | undefined;
     audio?.dispose?.();

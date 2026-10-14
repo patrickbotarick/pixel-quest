@@ -27,6 +27,19 @@ export function addSceneBackdrop(scene: Phaser.Scene, official: string, fallback
   return addBackdrop(scene, scene.textures.exists(official) ? official : fallback);
 }
 
+/** One display-list entry: the opaque frame is always behind its content.
+ * Child depth cannot lift a child above a separate scene-level panel.
+ */
+export function addUiPanel(scene: Phaser.Scene, key: string, x: number, y: number, w: number, h: number) {
+  const root = scene.add.container(0, 0).setName("ui-panel").setDepth(10);
+  const frame = scene.textures.exists(key)
+    ? scene.add.nineslice(x, y, key, undefined, w, h, 12, 12, 12, 12)
+    : scene.add.rectangle(x, y, w, h, COLOR.ink, 0.96).setStrokeStyle(4, COLOR.gold);
+  const content = scene.add.container(0, 0).setName("ui-panel-content");
+  root.add([frame, content]);
+  return { root, content };
+}
+
 export function addStars(scene: Phaser.Scene, x: number, y: number, earned: number, scale = 2.2): Phaser.GameObjects.Image[] {
   const official = scene.textures.exists("ui.star") && scene.textures.exists("ui.star_empty");
   const stars: Phaser.GameObjects.Image[] = [];
@@ -89,6 +102,10 @@ export class UiButton {
   private tone: "normal" | "good" | "bad" | "hot" = "normal";
   private used = false;
   private readonly repeat: boolean;
+  private enabled = true;
+  private pressed = false;
+  private focused = false;
+  private readonly hit: Phaser.GameObjects.Rectangle;
 
   constructor(
     scene: Phaser.Scene,
@@ -101,14 +118,13 @@ export class UiButton {
     options: ButtonOptions = {},
   ) {
     this.repeat = options.repeat === true;
-    this.root = scene.add.container(x, y);
+    this.root = scene.add.container(x, y).setName(`button:${label}`);
     this.bg = scene.add.graphics();
-    const parts: Phaser.GameObjects.GameObject[] = [];
+    const parts: Phaser.GameObjects.GameObject[] = [this.bg];
     if (scene.textures.exists("ui.button_primary_normal")) {
       this.slice = scene.add.nineslice(0, 0, "ui.button_primary_normal", undefined, w, h, 12, 12, 12, 12);
       parts.push(this.slice);
     } else {
-      parts.push(this.bg);
       this.paint();
     }
     const text = scene.add.text(0, options.hint ? -10 : 0, label, uiText(options.fontSize ?? (options.hint ? 34 : 28))).setOrigin(0.5);
@@ -116,25 +132,31 @@ export class UiButton {
     parts.push(text);
     if (options.hint) parts.push(scene.add.text(0, 24, options.hint, uiText(16)).setOrigin(0.5).setStroke("#182437", 3));
     const hit = scene.add.rectangle(0, 0, w, h, 0xffffff, 0.001).setInteractive({ useHandCursor: true });
+    this.hit = hit;
     hit.on("pointerover", () => {
+      if (!this.enabled) return;
       if (this.tone === "good" || this.tone === "bad") return;
       this.tone = "hot";
       this.paint();
     });
     hit.on("pointerout", () => {
+      this.pressed = false;
       if (this.tone === "hot") {
         this.tone = "normal";
         this.paint();
       }
     });
     hit.on("pointerdown", () => {
-      if (this.used && !this.repeat) return;
+      if (!this.enabled || (this.used && !this.repeat)) return;
+      this.pressed = true;
+      this.paint();
       if (!this.repeat) this.used = true;
       const audio = getAudio(scene);
       audio.unlock();
       audio.sfx("click");
       this.onClick();
     });
+    hit.on("pointerup", () => { this.pressed = false; this.paint(); });
     parts.push(hit);
     this.root.add(parts);
     if (this.slice) this.paint();
@@ -146,21 +168,37 @@ export class UiButton {
     this.paint();
   }
 
+  setEnabled(enabled: boolean): void {
+    this.enabled = enabled;
+    if (this.hit.input) this.hit.input.enabled = enabled;
+    this.paint();
+  }
+
+  setFocused(focused: boolean): void {
+    this.focused = focused;
+    this.paint();
+  }
+
   private paint(): void {
     if (this.slice) {
       const key =
-        this.tone === "hot"
+        !this.enabled
+          ? "ui.button_primary_disabled"
+          : this.pressed
+            ? "ui.button_primary_pressed"
+            : this.tone === "hot" || this.focused
           ? "ui.button_primary_hover"
           : this.tone === "normal"
             ? "ui.button_primary_normal"
             : "ui.button_primary_pressed";
       if (this.slice.scene.textures.exists(key)) this.slice.setTexture(key);
-      if (this.tone === "good") this.slice.setTint(0xb7f3c9);
+      if (!this.enabled) this.slice.setTint(0x9bb0c9);
+      else if (this.tone === "good") this.slice.setTint(0xb7f3c9);
       else if (this.tone === "bad") this.slice.setTint(0xffb4b0);
       else this.slice.clearTint();
       return;
     }
-    const fill = this.tone === "good" ? 0x2f7a49 : this.tone === "bad" ? 0x8d4550 : this.tone === "hot" ? 0x314868 : 0x24344c;
+    const fill = !this.enabled ? 0x354052 : this.tone === "good" ? 0x2f7a49 : this.tone === "bad" ? 0x8d4550 : this.tone === "hot" || this.focused || this.pressed ? 0x314868 : 0x24344c;
     const border = this.tone === "good" ? 0x67c58d : this.tone === "bad" ? 0xe66d67 : COLOR.gold;
     this.bg.clear();
     this.bg.fillStyle(COLOR.ink, 1);

@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 import { loadSave, writeSave, type SaveData } from "../logic/saveManager.ts";
 import { COLOR } from "../GameConfig.ts";
-import { addSceneBackdrop, getAudio, pixelText, UiButton, uiText } from "../ui/widgets.ts";
+import { addSceneBackdrop, addUiPanel, getAudio, pixelText, UiButton, uiText } from "../ui/widgets.ts";
 
 interface SettingsData {
   back?: "menu" | "pause";
@@ -10,6 +10,8 @@ interface SettingsData {
 export class SettingsScene extends Phaser.Scene {
   private back: "menu" | "pause" = "menu";
   private volumeText!: Phaser.GameObjects.Text;
+  private content!: Phaser.GameObjects.Container;
+  private body?: Phaser.GameObjects.Container;
 
   constructor() {
     super("settings");
@@ -21,30 +23,29 @@ export class SettingsScene extends Phaser.Scene {
 
   create(): void {
     addSceneBackdrop(this, "world.main_menu.background", "bg_forest");
-    if (this.textures.exists("ui.panel_settings")) {
-      this.add.nineslice(640, 380, "ui.panel_settings", undefined, 760, 560, 12, 12, 12, 12).setDepth(1);
-    } else {
-      this.add.rectangle(640, 360, 1280, 720, COLOR.ink, 0.45);
-    }
-    const title = this.add.text(640, 90, "CONFIGURAÇÕES", pixelText(28)).setOrigin(0.5);
+    this.content = addUiPanel(this, "ui.panel_settings", 640, 360, 820, 680).content;
+    const title = this.add.text(640, 70, "CONFIGURAÇÕES", pixelText(28)).setOrigin(0.5);
     title.setStroke("#182437", 7);
+    this.content.add(title);
     this.render();
   }
 
   private render(): void {
-    this.children.getByName("settings-body")?.destroy(true);
+    this.body?.destroy(true);
     const save = loadSave();
     const audio = getAudio(this);
     audio.setMusicEnabled(save.settings.music);
     audio.setSfxEnabled(save.settings.sfx);
     audio.setVolume(save.settings.volume);
     const root = this.add.container(0, 0).setName("settings-body");
+    this.body = root;
+    this.content.add(root);
     const music = new UiButton(
       this,
       640,
-      200,
+      168,
       520,
-      72,
+      84,
       save.settings.music ? "MÚSICA: LIGADA" : "MÚSICA: DESLIGADA",
       () => this.toggle((next) => {
         next.settings.music = !next.settings.music;
@@ -54,9 +55,9 @@ export class SettingsScene extends Phaser.Scene {
     const sfx = new UiButton(
       this,
       640,
-      286,
+      264,
       520,
-      72,
+      84,
       save.settings.sfx ? "EFEITOS: LIGADOS" : "EFEITOS: DESLIGADOS",
       () => this.toggle((next) => {
         next.settings.sfx = !next.settings.sfx;
@@ -66,9 +67,9 @@ export class SettingsScene extends Phaser.Scene {
     const motion = new UiButton(
       this,
       640,
-      372,
+      360,
       520,
-      72,
+      84,
       save.settings.reduceMotion ? "MENOS MOVIMENTO: SIM" : "MENOS MOVIMENTO: NÃO",
       () => this.toggle((next) => {
         next.settings.reduceMotion = !next.settings.reduceMotion;
@@ -79,12 +80,12 @@ export class SettingsScene extends Phaser.Scene {
     this.volumeText = this.add.text(640, 450, `VOLUME ${Math.round(save.settings.volume * 100)}`, uiText(24)).setOrigin(0.5);
     root.add(this.volumeText);
     const track = this.add.rectangle(640, 500, 420, 18, 0x121a28).setStrokeStyle(3, COLOR.gold);
-    const knob = this.add.circle(440 + save.settings.volume * 420, 500, 18, COLOR.gold).setInteractive({ useHandCursor: true, draggable: true });
+    const knob = this.add.circle(430 + save.settings.volume * 420, 500, 18, COLOR.gold).setInteractive({ useHandCursor: true, draggable: true });
     this.input.setDraggable(knob);
     knob.on("drag", (_pointer: Phaser.Input.Pointer, dragX: number) => {
-      const x = Phaser.Math.Clamp(dragX, 440, 860);
+      const x = Phaser.Math.Clamp(dragX, 430, 850);
       knob.x = x;
-      const volume = (x - 440) / 420;
+      const volume = (x - 430) / 420;
       const next = loadSave();
       next.settings.volume = volume;
       writeSave(next);
@@ -97,7 +98,7 @@ export class SettingsScene extends Phaser.Scene {
       if (!document.fullscreenElement) void element.requestFullscreen?.();
       else void document.exitFullscreen?.();
     }, { repeat: true, fontSize: 24 });
-    const back = new UiButton(this, 640, 660, 320, 56, "VOLTAR", () => this.close(), { fontSize: 22 });
+    const back = new UiButton(this, 640, 654, 320, 72, "VOLTAR", () => this.close(), { fontSize: 24 });
     root.add([full.root, back.root]);
   }
 

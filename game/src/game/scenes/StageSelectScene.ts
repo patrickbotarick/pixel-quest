@@ -50,9 +50,12 @@ export class StageSelectScene extends Phaser.Scene {
         g.strokeCircle(point.x, point.y, size / 2);
       }
       if (open) {
-        this.add.text(point.x, point.y - 2, String(stage.id), uiText(boss ? 22 : 20)).setOrigin(0.5).setDepth(4).setStroke("#182437", 4);
+        // The completed texture already contains a central green check mark.
+        const numberY = official && cleared ? point.y + 72 : point.y - 2;
+        this.add.text(point.x, numberY, String(stage.id), uiText(boss ? 22 : 20)).setOrigin(0.5).setDepth(4).setStroke("#182437", 4);
         if (cleared) addStars(this, point.x, point.y + 46, save.stars[stage.id] ?? 0, 0.9).forEach((star) => star.setDepth(4));
-        const hit = this.add.circle(point.x, point.y, 36, 0xffffff, 0.001).setInteractive({ useHandCursor: true }).setDepth(5);
+        const hit = this.add.rectangle(point.x, point.y + (cleared ? 30 : 0), boss ? 104 : 88, cleared ? 144 : 88, 0xffffff, 0.001)
+          .setInteractive({ useHandCursor: true }).setDepth(5);
         hit.on("pointerdown", () => {
           getAudio(this).unlock();
           getAudio(this).sfx("confirm");

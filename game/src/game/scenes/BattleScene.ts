@@ -41,6 +41,9 @@ interface CardView {
   root: Phaser.GameObjects.Container;
   back: Phaser.GameObjects.Image;
   front: Phaser.GameObjects.Container;
+  highlight: Phaser.GameObjects.Graphics;
+  width: number;
+  height: number;
 }
 
 const TUTORIAL: Record<ChallengeKind, string> = {
@@ -157,7 +160,7 @@ export class BattleScene extends Phaser.Scene {
       .setScale(heroOfficial ? officialScale("hero") : 3.3)
       .setDepth(10);
     playHeroPose(this, this.anim, this.hero, "idle", 2.3, true);
-    this.heroBar = makeMeter(this, this.heroBaseX, this.meterY(this.hero), "HERÓI", "hero");
+    this.heroBar = makeMeter(this, this.heroBaseX, this.meterY(this.hero), "SAMUCA", "hero");
     this.heroBar.setRatio(1);
 
     stage.enemies.forEach((enemy, index) => {
@@ -209,11 +212,13 @@ export class BattleScene extends Phaser.Scene {
     this.feedback.setStroke("#182437", 4);
     this.challengeRoot = this.add.container(0, 0).setDepth(24);
     this.bindKeys();
+    this.scale.on("resize", this.reflowMemory, this);
     getAudio(this).playMusic(stage.music);
     this.playIntro(stage.enemies.some((enemy) => enemy.boss));
     this.events.once("shutdown", () => {
       this.leaving = true;
       this.input.keyboard?.off("keydown");
+      this.scale.off("resize", this.reflowMemory, this);
     });
   }
 
@@ -374,45 +379,90 @@ export class BattleScene extends Phaser.Scene {
     const preview = this.manager.phase === "preview";
     this.feedback.setText(preview ? "OLHE BEM" : "ACHE OS PARES");
     const panel = challengePanel();
-    const grid = memoryGrid(memory.cards.length, memoryPlayfield(panel));
+    const grid = memoryGrid(memory.cards.length, memoryPlayfield(panel), this.scale.displaySize.width / this.scale.gameSize.width);
     const iconScale = Math.min(grid.cardW, grid.cardH) / 42;
     const officialBack = this.textures.exists("ui.card_back");
     this.cardViews = memory.cards.map((card, index) => {
       const place = grid.positions[index]!;
-      const root = this.add.container(place.x, place.y);
+      const root = this.add.container(place.x, place.y).setName(`memory-card-${index}`);
+      const highlight = this.add.graphics();
       const faceId = cardFaceId(card.symbol);
       const officialFace = this.textures.exists(faceId);
       const fitted = officialBack || officialFace ? fitCard(grid.cardW, grid.cardH) : { w: grid.cardW, h: grid.cardH };
       const back = this.add.image(0, 0, officialBack ? "ui.card_back" : "card_back").setDisplaySize(fitted.w, fitted.h);
       const front = this.add.container(0, 0);
       if (officialFace) {
-        front.add(this.add.image(0, 0, faceId).setDisplaySize(fitted.w, fitted.h));
+        front.add(this.add.image(0, 0, faceId).setName("memory-face-art").setDisplaySize(fitted.w, fitted.h));
       } else {
         const face = this.add.rectangle(0, 0, grid.cardW, grid.cardH, 0xfff6e4).setStrokeStyle(4, COLOR.gold);
-        const icon = this.add.image(0, 0, `icon_${card.symbol}`).setScale(iconScale);
+        const icon = this.add.image(0, 0, `icon_${card.symbol}`).setName("memory-face-icon").setScale(iconScale);
         front.add([face, icon]);
       }
-      root.add([back, front]);
+      root.add([highlight, back, front]);
       const open = preview || card.up;
       back.setVisible(!open);
       front.setVisible(open);
-      root.setSize(grid.cardW, grid.cardH);
+      root.setSize(grid.hitW, grid.hitH);
+      // Phaser adds Container.displayOrigin when testing input: start at 0,0.
       root.setInteractive(
-        new Phaser.Geom.Rectangle(-grid.cardW / 2, -grid.cardH / 2, grid.cardW, grid.cardH),
+        new Phaser.Geom.Rectangle(0, 0, grid.hitW, grid.hitH),
         Phaser.Geom.Rectangle.Contains,
       );
       root.on("pointerdown", () => this.onCard(index));
+      root.on("pointerover", () => { root.setData("hover", true); this.updateMemoryHighlights(); });
+      root.on("pointerout", () => { root.setData("hover", false); this.updateMemoryHighlights(); });
       this.challengeRoot.add(root);
-      return { root, back, front };
+      return { root, back, front, highlight, width: fitted.w, height: fitted.h };
     });
+    this.reflowMemory();
     if (preview) {
       this.uiLater(3000, () => {
         if (!this.manager.endPreview()) return;
         this.feedback.setText("ACHE OS PARES");
         for (const card of this.cardViews) this.flipView(card, false);
+        this.updateMemoryHighlights();
         this.publish();
       });
     }
+  }
+
+  private reflowMemory(): void {
+    if (!this.cardViews.length) return;
+    const cssScale = this.scale.displaySize.width / this.scale.gameSize.width;
+    const grid = memoryGrid(this.cardViews.length, memoryPlayfield(challengePanel()), cssScale);
+    this.cardViews.forEach((view, index) => {
+      const point = grid.positions[index]!;
+      const fitted = fitCard(grid.cardW, grid.cardH);
+      view.width = fitted.w;
+      view.height = fitted.h;
+      view.root.setPosition(point.x, point.y).setSize(grid.hitW, grid.hitH);
+      view.root.setData("layout", { columns: grid.columns, rows: grid.rows, touchTargetMet: grid.touchTargetMet });
+      view.root.setInteractive(new Phaser.Geom.Rectangle(0, 0, grid.hitW, grid.hitH), Phaser.Geom.Rectangle.Contains);
+      if (view.root.input) view.root.input.cursor = "pointer";
+      view.back.setDisplaySize(fitted.w, fitted.h);
+      for (const child of view.front.list) {
+        if (child instanceof Phaser.GameObjects.Image && child.name === "memory-face-icon") child.setScale(grid.cardW / 42);
+        else if (child instanceof Phaser.GameObjects.Image || child instanceof Phaser.GameObjects.Rectangle) child.setDisplaySize(fitted.w, fitted.h);
+      }
+    });
+    this.updateMemoryHighlights();
+  }
+
+  private updateMemoryHighlights(): void {
+    const cards = this.manager.memory?.cards ?? [];
+    this.cardViews.forEach((view, index) => {
+      const card = cards[index];
+      const color = card?.matched ? COLOR.green : card?.up ? COLOR.gold : view.root.getData("hover") ? COLOR.cream : 0x66758a;
+      const graphics = view.highlight;
+      graphics.clear().lineStyle(card?.matched ? 5 : 3, typeof color === "number" ? color : 0xfff2d6, 1);
+      graphics.strokeRoundedRect(-view.width / 2 - 3, -view.height / 2 - 3, view.width + 6, view.height + 6, 5);
+      if (card?.matched) {
+        graphics.fillStyle(COLOR.green, 1);
+        graphics.fillRect(view.width / 2 - 18, -view.height / 2 - 8, 24, 20);
+        graphics.lineStyle(3, 0xfff2d6, 1);
+        graphics.beginPath().moveTo(view.width / 2 - 14, -view.height / 2 + 1).lineTo(view.width / 2 - 9, -view.height / 2 + 6).lineTo(view.width / 2 + 1, -view.height / 2 - 4).strokePath();
+      }
+    });
   }
 
   private showReflex(): void {
@@ -455,6 +505,7 @@ export class BattleScene extends Phaser.Scene {
     getAudio(this).sfx("card");
     const view = this.cardViews[index];
     if (view) this.flipView(view, true);
+    this.updateMemoryHighlights();
     if (event.type === "match") {
       getAudio(this).sfx("pair");
       if (event.done) {
@@ -471,6 +522,7 @@ export class BattleScene extends Phaser.Scene {
         const second = this.cardViews[event.b];
         if (first) this.flipView(first, false);
         if (second) this.flipView(second, false);
+        this.updateMemoryHighlights();
       });
     }
   }

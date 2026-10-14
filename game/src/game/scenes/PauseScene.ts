@@ -1,6 +1,5 @@
 import Phaser from "phaser";
-import { COLOR } from "../GameConfig.ts";
-import { pixelText, UiButton } from "../ui/widgets.ts";
+import { addUiPanel, pixelText, UiButton } from "../ui/widgets.ts";
 import type { BattleScene } from "./BattleScene.ts";
 
 interface PauseData {
@@ -20,13 +19,10 @@ export class PauseScene extends Phaser.Scene {
 
   create(): void {
     this.cameras.main.setBackgroundColor("rgba(8,12,24,0.62)");
-    if (this.textures.exists("ui.panel_menu")) {
-      this.add.nineslice(640, 380, "ui.panel_menu", undefined, 560, 520, 12, 12, 12, 12);
-    } else {
-      this.add.rectangle(640, 360, 560, 520, COLOR.ink, 0.94).setStrokeStyle(5, COLOR.gold);
-    }
+    const content = addUiPanel(this, "ui.panel_menu", 640, 380, 560, 540).content;
     const title = this.add.text(640, 170, "PAUSA", pixelText(32)).setOrigin(0.5);
     title.setStroke("#182437", 6);
+    content.add(title);
     const buttons = [
       ["CONTINUAR", () => this.continueGame()],
       ["REINICIAR", () => this.restart()],
@@ -34,7 +30,7 @@ export class PauseScene extends Phaser.Scene {
       ["MAPA", () => this.toMap()],
     ] as const;
     buttons.forEach(([label, action], index) => {
-      new UiButton(this, 640, 270 + index * 88, 400, 72, label, action);
+      content.add(new UiButton(this, 640, 264 + index * 96, 420, 84, label, action).root);
     });
     this.input.keyboard?.on("keydown-ESC", () => this.continueGame());
     this.events.once("shutdown", () => this.input.keyboard?.off("keydown-ESC"));

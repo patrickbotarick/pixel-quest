@@ -463,8 +463,8 @@ describe("layout dos desafios", () => {
     assert.ok(containsBox(panel, field));
     for (const count of [4, 6]) {
       const grid = memoryGrid(count, field);
-      assert.equal(grid.columns, count === 6 ? 3 : 2);
-      assert.equal(grid.rows, 2);
+      assert.equal(grid.columns, count);
+      assert.equal(grid.rows, 1);
       assert.equal(grid.positions.length, count);
       assert.ok(grid.cardW >= 48 && grid.cardH >= 56);
       const boxes = grid.positions.map((point) => cardBox(point, grid.cardW, grid.cardH));

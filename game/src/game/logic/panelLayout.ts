@@ -49,33 +49,52 @@ export interface MemoryGrid {
   cardH: number;
   gapX: number;
   gapY: number;
+  hitW: number;
+  hitH: number;
+  touchTargetMet: boolean;
   positions: Point[];
 }
 
-/** Centros das cartas. 4 cartas → 2×2. 6 cartas → 3×2. A grade cabe no campo. */
-export function memoryGrid(cardCount: number, area: Box): MemoryGrid {
-  const columns = cardCount > 4 ? 3 : 2;
-  const rows = Math.max(1, Math.ceil(cardCount / columns));
-  const gapX = 16;
-  const gapY = 12;
-  const maxW = Math.max(1, (area.w - gapX * (columns - 1)) / columns);
-  const maxH = Math.max(1, (area.h - gapY * (rows - 1)) / rows);
-  const cardH = Math.floor(maxH);
-  const cardW = Math.floor(Math.min(maxW, cardH));
-  const gridW = columns * cardW + (columns - 1) * gapX;
-  const gridH = rows * cardH + (rows - 1) * gapY;
-  const originX = area.x + (area.w - gridW) / 2 + cardW / 2;
-  const originY = area.y + (area.h - gridH) / 2 + cardH / 2;
+/** Horizontal first; a second row is used only when it improves small targets.
+ * All dimensions derive from the playfield and its actual CSS scale.
+ */
+export function memoryGrid(cardCount: number, area: Box, cssScale = 1): MemoryGrid {
+  const count = Math.max(1, Math.floor(cardCount));
+  const scale = Math.max(0.01, cssScale);
+  const minTouch = 44 / scale;
+  const measure = (columns: number) => {
+    const rows = Math.ceil(count / columns);
+    const gapY = rows > 1 ? Math.min(12, area.h / 10) : 0;
+    const minGapX = Math.min(16, area.w / (columns * 10));
+    const maxW = Math.max(1, (area.w - minGapX * (columns - 1)) / columns);
+    const maxH = Math.max(1, (area.h - gapY * (rows - 1)) / rows);
+    const cardH = Math.min(maxH, maxW * 84 / 68);
+    const cardW = cardH * 68 / 84;
+    const hitW = Math.min(maxW, Math.max(cardW, minTouch));
+    const hitH = Math.min(maxH, Math.max(cardH, minTouch));
+    const gapX = Math.max(0, (area.w - columns * hitW) / (columns + 1));
+    return { columns, rows, cardW, cardH, hitW, hitH, gapX, gapY };
+  };
+  let layout = measure(count);
+  if (count > 4 && Math.min(layout.hitW, layout.hitH) * scale < 44) {
+    const fallback = measure(3);
+    if (Math.min(fallback.hitW, fallback.hitH) > Math.min(layout.hitW, layout.hitH)) layout = fallback;
+  }
+  const { columns, rows, cardW, cardH, hitW, hitH, gapX, gapY } = layout;
+  const gridW = columns * hitW + (columns - 1) * gapX;
+  const gridH = rows * hitH + (rows - 1) * gapY;
+  const originX = area.x + (area.w - gridW) / 2 + hitW / 2;
+  const originY = area.y + (area.h - gridH) / 2 + hitH / 2;
   const positions: Point[] = [];
-  for (let index = 0; index < cardCount; index++) {
+  for (let index = 0; index < count; index++) {
     const col = index % columns;
     const row = Math.floor(index / columns);
     positions.push({
-      x: originX + col * (cardW + gapX),
-      y: originY + row * (cardH + gapY),
+      x: originX + col * (hitW + gapX),
+      y: originY + row * (hitH + gapY),
     });
   }
-  return { columns, rows, cardW, cardH, gapX, gapY, positions };
+  return { columns, rows, cardW, cardH, hitW, hitH, gapX, gapY, touchTargetMet: Math.min(hitW, hitH) * scale >= 43.99, positions };
 }
 
 export function cardBox(center: Point, cardW: number, cardH: number): Box {

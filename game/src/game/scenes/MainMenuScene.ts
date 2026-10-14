@@ -46,10 +46,12 @@ export class MainMenuScene extends Phaser.Scene {
       this.tweens.add({ targets: cloudB, x: 1500, duration: 36000, repeat: -1, onRepeat: () => cloudB.setX(-180) });
     }
     this.layout();
-    this.events.on("wake", () => {
+    const onWake = () => {
       this.layout();
       getAudio(this).playMusic("menu");
-    });
+    };
+    this.events.on("wake", onWake);
+    this.events.once("shutdown", () => this.events.off("wake", onWake));
     getAudio(this).playMusic("menu");
     const ready = window as unknown as { __pqReady?: boolean };
     ready.__pqReady = true;

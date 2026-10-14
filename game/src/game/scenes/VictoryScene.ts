@@ -1,10 +1,10 @@
 import Phaser from "phaser";
 import { AnimationController } from "../anim/AnimationController.ts";
 import { playHeroPose, playImpact } from "../art/playPose.ts";
-import { COLOR } from "../GameConfig.ts";
 import { getStage } from "../logic/stages.ts";
 import { loadSave } from "../logic/saveManager.ts";
-import { addSceneBackdrop, getAudio, pixelText, UiButton, uiText } from "../ui/widgets.ts";
+import { victoryMessage } from "../ui/sceneCopy.ts";
+import { addSceneBackdrop, addUiPanel, getAudio, pixelText, UiButton, uiText } from "../ui/widgets.ts";
 
 interface VictoryData {
   stageId?: number;
@@ -30,9 +30,7 @@ export class VictoryScene extends Phaser.Scene {
   create(): void {
     const stage = getStage(this.stageId);
     addSceneBackdrop(this, "world.victory.background", `bg_${stage.biome}`);
-    if (this.textures.exists("ui.panel_victory")) {
-      this.add.nineslice(860, 340, "ui.panel_victory", undefined, 520, 460, 12, 12, 12, 12).setDepth(2);
-    }
+    const content = addUiPanel(this, "ui.panel_victory", 860, 350, 560, 620).content;
     const anim = new AnimationController(this);
     const heroOfficial = this.textures.exists("samuca.victory") || this.textures.exists("samuca.idle");
     const hero = this.add
@@ -46,19 +44,18 @@ export class VictoryScene extends Phaser.Scene {
       this.add.image(430, 470, crystalKey).setScale(crystalKey === "ui.crystal" ? 2.2 : 3).setDepth(4);
       playImpact(this, "crystal_recovered", 430, 470, 1.6, loadSave().settings.reduceMotion);
     }
-    const title = this.add.text(860, 160, "FASE CONCLUÍDA!", pixelText(22)).setOrigin(0.5).setDepth(4);
+    const title = this.add.text(860, 112, "FASE CONCLUÍDA!", pixelText(22)).setOrigin(0.5);
     title.setStroke("#182437", 7);
-    this.add.text(860, 220, stage.name, uiText(24)).setOrigin(0.5).setDepth(4).setStroke("#182437", 4);
-    if (this.crystal) {
-      const crystal = this.add.text(860, 268, "CRISTAL DA IMAGINAÇÃO!", uiText(20, "#F2C567")).setOrigin(0.5).setDepth(4);
-      crystal.setStroke("#182437", 4);
-    }
+    const stageName = this.add.text(860, 168, stage.name, uiText(26)).setOrigin(0.5).setStroke("#182437", 4);
+    const message = this.add.text(860, 238, victoryMessage(this.stageId), { ...uiText(26, "#F2C567"), align: "center", wordWrap: { width: 480 } }).setOrigin(0.5).setStroke("#182437", 4);
+    content.add([title, stageName, message]);
     const reduce = loadSave().settings.reduceMotion;
     const starKey = (filled: boolean) => (this.textures.exists(filled ? "ui.star" : "ui.star_empty") ? (filled ? "ui.star" : "ui.star_empty") : "star");
     for (let i = 0; i < 3; i++) {
       const earned = i < this.stars;
       const official = this.textures.exists("ui.star");
       const star = this.add.image(780 + i * 80, 330, starKey(earned)).setScale(official ? 1.8 : 3).setDepth(4).setAlpha(earned || official ? 1 : 0.45);
+      content.add(star);
       if (!official && !earned) star.setTint(0x6d7c96);
       if (!reduce && earned) {
         star.setScale(0.2);
@@ -74,11 +71,10 @@ export class VictoryScene extends Phaser.Scene {
     audio.playMusic("victory");
     audio.sfx("victory");
     if (this.stageId < 10) {
-      new UiButton(this, 860, 430, 400, 72, "PRÓXIMA FASE", () => this.scene.start("battle", { stageId: this.stageId + 1 }));
+      content.add(new UiButton(this, 860, 434, 440, 88, "PRÓXIMA FASE", () => this.scene.start("battle", { stageId: this.stageId + 1 })).root);
     } else {
-      new UiButton(this, 860, 430, 400, 72, "VER O FINAL", () => this.scene.start("ending"));
+      content.add(new UiButton(this, 860, 434, 440, 88, "VER O FINAL", () => this.scene.start("ending")).root);
     }
-    new UiButton(this, 860, 520, 300, 60, "MAPA", () => this.scene.start("stages"), { fontSize: 24 });
-    this.add.rectangle(0, 0, 1, 1, COLOR.ink, 0);
+    content.add(new UiButton(this, 860, 548, 440, 88, "VOLTAR AO MAPA", () => this.scene.start("stages"), { fontSize: 26 }).root);
   }
 }

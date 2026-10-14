@@ -3,7 +3,7 @@ import { AnimationController } from "../anim/AnimationController.ts";
 import { playHeroPose } from "../art/playPose.ts";
 import { getStage } from "../logic/stages.ts";
 import { loadSave, writeSave } from "../logic/saveManager.ts";
-import { addSceneBackdrop, getAudio, pixelText, UiButton, uiText } from "../ui/widgets.ts";
+import { addSceneBackdrop, addUiPanel, getAudio, pixelText, UiButton, uiText } from "../ui/widgets.ts";
 
 interface OverData {
   stageId?: number;
@@ -26,11 +26,7 @@ export class GameOverScene extends Phaser.Scene {
   create(): void {
     const stage = getStage(this.stageId);
     addSceneBackdrop(this, "world.defeat.background", `bg_${stage.biome}`);
-    if (this.textures.exists("ui.panel_defeat")) {
-      this.add.nineslice(880, 360, "ui.panel_defeat", undefined, 520, 480, 12, 12, 12, 12).setDepth(2);
-    } else {
-      this.add.rectangle(640, 360, 1280, 720, 0x121a28, 0.35);
-    }
+    const content = addUiPanel(this, "ui.panel_defeat", 880, 360, 560, 580).content;
     const anim = new AnimationController(this);
     const official = this.textures.exists("samuca.defeat") || this.textures.exists("samuca.idle");
     const hero = this.add
@@ -43,20 +39,21 @@ export class GameOverScene extends Phaser.Scene {
     title.setStroke("#182437", 7);
     const msg = this.add.text(880, 260, "Você consegue.\nVamos tentar de novo?", { ...uiText(24), align: "center" }).setOrigin(0.5).setDepth(4);
     msg.setStroke("#182437", 4);
+    content.add([title, msg]);
     getAudio(this).sfx("defeat");
     getAudio(this).playMusic("menu");
     if (this.offerHelp) {
-      this.add.text(880, 340, "QUER UMA AJUDINHA?", uiText(22, "#F2C567")).setOrigin(0.5).setDepth(4).setStroke("#182437", 4);
-      new UiButton(this, 880, 420, 360, 68, "SIM", () => {
+      content.add(this.add.text(880, 340, "QUER UMA AJUDINHA?", uiText(22, "#F2C567")).setOrigin(0.5).setStroke("#182437", 4));
+      content.add(new UiButton(this, 880, 420, 400, 80, "SIM", () => {
         const save = loadSave();
         save.helpArmed[this.stageId] = true;
         writeSave(save);
         this.scene.start("battle", { stageId: this.stageId });
-      });
-      new UiButton(this, 880, 500, 360, 60, "AGORA NÃO", () => this.scene.start("battle", { stageId: this.stageId }), { fontSize: 22 });
+      }).root);
+      content.add(new UiButton(this, 880, 510, 400, 80, "AGORA NÃO", () => this.scene.start("battle", { stageId: this.stageId }), { fontSize: 24 }).root);
     } else {
-      new UiButton(this, 880, 400, 400, 72, "TENTAR NOVAMENTE", () => this.scene.start("battle", { stageId: this.stageId }));
+      content.add(new UiButton(this, 880, 400, 440, 88, "TENTAR NOVAMENTE", () => this.scene.start("battle", { stageId: this.stageId })).root);
     }
-    new UiButton(this, 880, this.offerHelp ? 580 : 500, 280, 56, "MAPA", () => this.scene.start("stages"), { fontSize: 22 });
+    content.add(new UiButton(this, 880, this.offerHelp ? 606 : 514, 400, 80, "MAPA", () => this.scene.start("stages"), { fontSize: 26 }).root);
   }
 }
