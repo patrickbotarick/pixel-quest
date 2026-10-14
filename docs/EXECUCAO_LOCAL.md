@@ -2,7 +2,7 @@
 
 ## Windows
 
-Node.js >=22.12, npm e Git para sincronização. Abra o iniciador na raiz. Ele usa `%~dp0`, entra em `game/`, verifica Node/npm e instala pelo `package-lock.json` se a instalação estiver ausente ou o lockfile mudar. Falhas mantêm o terminal aberto. O marcador de instalação fica em `node_modules/` e não é versionado.
+Node.js >=22.12, npm e Git para sincronização. Abra o iniciador na raiz. Ele usa `%~dp0`, entra em `game/`, verifica Node/npm e instala pelo `package-lock.json` se a instalação estiver ausente ou o conteúdo JSON do lockfile mudar. Diferenças LF/CRLF e de formatação não causam reinstalação. Antes de uma atualização real de dependências, encerre o dev com Ctrl+C e o preview com `npm run preview:stop`, pois arquivos nativos abertos podem bloquear `npm ci` no Windows. Falhas mantêm o terminal aberto. O marcador de instalação fica em `node_modules/` e não é versionado.
 
 Endereço do computador: http://localhost:8080/. O servidor usa `0.0.0.0:8080`; não altere esse endereço para um IP específico da loja. O mesmo clone funciona em outra unidade e em uma pasta com espaços.
 

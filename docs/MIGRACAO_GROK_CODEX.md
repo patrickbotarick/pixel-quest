@@ -62,6 +62,7 @@ Alterações necessárias à portabilidade:
 - O wrapper do ambiente executa o entrypoint JavaScript do Vite pelo Node, evitando falha ao executar shims `.cmd` no Windows e mantendo argv/pastas com espaços.
 - `startup.sh` usa a própria pasta, em vez de `/workspace`, e escreve o log local em `.grok/`.
 - `preview:restart` e `preview:stop` usam `local-preview.mjs`. O supervisor Linux exportado continua preservado em `preview.mjs`. O novo supervisor só encerra seu processo identificado, recusando processos desconhecidos na porta.
+- O iniciador compara o conteúdo JSON do lockfile, ignorando diferenças LF/CRLF de checkout. Falhas de instalação sempre resultam em exit 1, inclusive códigos Windows grandes que poderiam truncar para zero. Dois testes de regressão cobrem essas situações.
 - O comando de testes usa aspas compatíveis com Windows. Os testes de symlink usam junction de diretório no Windows, sem alterar o comportamento testado.
 - Os testes PWA usam uma pasta temporária isolada, impedindo que a identidade real Pixel Quest contamine expectativas do template.
 - O smoke guarda arquivos dentro da pasta real do jogo, usa Chrome instalado no Windows e espera o menu pronto. As asserções dos testes de contrato foram ajustadas ao caminho portável.
@@ -91,7 +92,7 @@ Ambiente: Windows, Node 24.11.1, npm 11.6.2; dependências instaladas com `npm c
 | Verificação | Resultado |
 | --- | --- |
 | Backup / importação inicial | 1.618 arquivos conferidos; zero divergências |
-| `npm test` | 197 testes de scripts + 87 testes TS, 284 aprovados, zero falhas/skips |
+| `npm test` | 199 testes de scripts + 87 testes TS, 286 aprovados, zero falhas/skips |
 | `npm run typecheck` | passou |
 | `npm run lint` | passou; zero erros, dois avisos herdados |
 | `npm run check:assets` | 171 pedidos completos; zero ausências/diferenças |
@@ -103,6 +104,8 @@ Ambiente: Windows, Node 24.11.1, npm 11.6.2; dependências instaladas com `npm c
 | `check_tools.py` | sete verificações aprovadas, incluindo composição/extração e rejeição de inputs inválidos |
 | `release.py` | 183 aprovados; 648 cópias conferidas; ZIP íntegro, não versionado |
 | `verify_publication.py` | 801 paths, 26 fontes, 183 hashes, viewer e 649 entradas ZIP conferidos |
+
+Na conferência pós-merge, o HMR precisou de reinício depois da troca para a main antiga, que removia temporariamente `game/src/`. Esse processo revelou uma reinstalação desnecessária por mudança LF/CRLF do lockfile e um arquivo nativo bloqueado por outro servidor deste jogo. O iniciador foi corrigido, os servidores identificados foram encerrados e as dependências restauradas pelo mesmo lockfile; nenhum save ou asset foi apagado. A execução e os testes foram repetidos depois da correção.
 
 O build foi repetido após os últimos ajustes de fonte. O preview foi reiniciado para testar esse build, evitando validar saída anterior. Screenshots e verdicts locais ficam em `game/screenshots/`.
 
@@ -130,6 +133,12 @@ Branch de trabalho: `feat/unify-game-and-assets`, a partir da main oficial citad
 
 Mensagem do commit de migração: `feat: migrate Pixel Quest game and unify asset repository`.
 
-Commit SHA da migração: pendente de criação após revisão final.
+Commit SHA da migração: `a36b89018bc092fde37be2cd2547729a66992dab`.
 
-Push e merge: pendentes nesta versão inicial do relatório; serão registrados após a confirmação pelo Git. Integração em main somente por fast-forward, sem force push, com os testes essenciais aprovados.
+Push da branch realizado com upstream `origin/feat/unify-game-and-assets`. A main foi integrada por fast-forward de `96cd42c` para `a36b890` e publicada. `git ls-remote` confirmou ambos os refs no SHA de migração. Não houve force push, conflito de conteúdo ou união de históricos distintos.
+
+A primeira tentativa de fast-forward encontrou um `index.lock` vazio. Foi confirmada a ausência de processo Git ativo, a trava foi movida para `.migration-backup/stale-index.lock` e a operação foi repetida com sucesso; nenhum dado foi removido. O checkout voltou à branch de trabalho para este complemento documental.
+
+O commit posterior corrige o iniciador para diferenças LF/CRLF e códigos de erro Windows, adiciona os dois testes de regressão e registra a publicação já confirmada. O SHA acima identifica o commit de implementação, evitando uma referência circular ao SHA do próprio relatório. Para obter o HEAD atual: `git rev-parse HEAD`. Estado de conclusão: branch de trabalho e main sincronizadas no remoto, sem alterações pendentes de código; exportação preservada e servidor local iniciado pelo `.bat`.
+
+O remoto contém `game/`, `assets/`, `docs/`, ferramentas da fábrica, scripts do jogo e iniciador Windows. Caches, dependências instaladas, ZIP de distribuição e backup original continuam somente locais.
