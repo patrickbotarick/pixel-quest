@@ -1,71 +1,62 @@
-# Pixel Quest — Asset Factory v1.0
+# Pixel Quest: Aventura dos Desafios
 
-Biblioteca independente para **Pixel Quest: Aventura dos Desafios**. Samuca segue a ficha oficial fornecida em `00_references/samuca_official_reference.png`. Nenhum projeto do Grok ou código do jogo foi alterado.
-
-221 recursos no manifesto; 183 ready; 38 needs_review; 83 spritesheets; 414 quadros de animação.
-
-183 recursos aprovados, 75 spritesheets e 374 quadros no pacote de integração. A produção artística não está 100% aprovada: os itens em revisão permanecem fora de `dist/`.
-
-## Abrir os resultados
-
-Abra `09_previews/index.html` em um navegador. Os dados estão embutidos em `viewer_data.js`, portanto o visualizador também pode funcionar via arquivo local sem servidor. Para servir por HTTP, na raiz:
-
-```powershell
-python -m http.server 8766 --bind 127.0.0.1
-```
-
-Abra `http://127.0.0.1:8766/09_previews/index.html`. Encerre o servidor com Ctrl+C no terminal correspondente.
-
-O visualizador permite selecionar personagem/animação, pausar/reproduzir, avançar quadros, trocar escala e fundo, inspecionar metadata, alternar camadas e testar todos os caminhos. Ele apenas lê assets.
-
-## Ferramentas
-
-Python + Pillow (única dependência de produção). Na máquina desta entrega foi utilizado o Python empacotado pelo Codex, com Pillow 12.3.0. Node.js foi usado para verificar a sintaxe do visualizador. A arte complexa foi efetivamente gerada com `image_gen` nativa em 26 chamadas; não foram usadas credenciais de API nem bibliotecas de assets baixadas.
-
-```powershell
-# Python instalado no computador:
-python -m pip install -r 11_tools/requirements.txt
-python 11_tools/qa.py
-python 11_tools/previews.py
-python 11_tools/viewer.py
-
-# Ou o runtime já disponível nesta máquina:
-$factoryPython = Join-Path $env:USERPROFILE '.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe'
-& $factoryPython 11_tools/qa.py
-
-# Reconstruir exportações a partir das fontes locais preservadas:
-./11_tools/run_factory.ps1 -Python $factoryPython
-```
-
-`run_factory.ps1` não gera nova arte por API. Ele recompõe os arquivos a partir das fontes locais. Aprovações estão vinculadas a SHA256; se uma textura mudar, a revisão precisa ser refeita antes da exportação.
-
-## Organização
+Um único repositório para o jogo e a biblioteca artística oficial. A migração preserva o jogo v1.1B, sem novas mecânicas ou mudanças visuais.
 
 ```text
-00_references/       referências oficiais, prints e fontes de ilustrações
-01_brand/            logotipo original separado
-02_characters/       Samuca: referências, PNGs, animações, expressões, metadata
-03_enemies/          nove arquétipos, fontes, PNGs, animações e metadata
-04_bosses/           Guardião de Pedra e Dragão das Sombras
-05_environments/     quatro ambientes: seis camadas, props, fontes e metadata
-06_ui/               botões, HUD, painéis, cartas, progress, ícones, menu
-07_vfx/              doze efeitos + versões reduzidas
-08_world/            mapa, introdução, vitória, derrota e encerramento
-09_previews/         HTML local, GIFs, contact sheets, composições e catálogo
-10_manifests/        manifesto, QA, cobertura, paletas, hashes e revisão
-11_tools/            produção, exportação, validação e documentação
-12_docs/             guias e exemplos TypeScript
-dist/                exclusivamente recursos aprovados e metadados de integração
+game/     React 19 + TanStack Start + Phaser 3; código e assets de execução
+assets/   Asset Factory: referências, fontes, arte, previews, manifestos e ferramentas
+docs/     execução local, workflow Git e relatório de migração
 ```
 
-## Integração
+## Iniciar no Windows
 
-Copie o **conteúdo de `dist/`** para uma pasta estática do jogo existente. Use `dist/assets.manifest.json`; nunca importe automaticamente o manifesto completo. Consulte `12_docs/PHASER_INTEGRATION.md`, `12_docs/examples/phaser_assets.ts` e `12_docs/GROK_IMPORT_PROMPT.md`.
+Instale Node.js 22.12 ou superior (validado com 24.11.1) e execute **INICIAR_PIXEL_QUEST.bat**. Ele instala as versões do lockfile quando necessário e informa os endereços disponíveis. Abra http://localhost:8080/. Encerre com Ctrl+C.
 
-O ZIP `pixel_quest_approved_assets_v1.zip` contém a mesma biblioteca aprovada, sem fontes, previews ou recursos pendentes. `dist/` e ZIP não são versionados: depois de clonar, execute `python 11_tools/qa.py` e `python 11_tools/release.py` para gerá-los. Consulte [publicação e reprodução](12_docs/GITHUB_PUBLICATION.md).
+Pelo terminal, na raiz do repositório:
 
-## Situação
+```powershell
+cd game
+npm ci --ignore-scripts
+npm run dev
+```
 
-QA técnico: 0 erros. A existência e o carregamento de arquivos não equivalem a aprovação visual. A lista precisa de pendências está em `12_docs/PRODUCTION_STATUS.md` e `10_manifests/visual_review.json`.
+Não precisa configurar banco, contas ou arquivos `.env`. O progresso fica no navegador, por origem; trocar de computador, navegador ou endereço não transfere o save. A exportação não contém o localStorage do site Grok. Consulte [execução e celular](docs/EXECUCAO_LOCAL.md).
 
-Leia também `ART_DIRECTION.md`, `ASSET_CATALOG.md`, `ANIMATION_GUIDE.md`, `QA_REPORT.md` e `LICENSE_AND_PROVENANCE.md` em `12_docs/`.
+## Verificar
+
+Dentro de `game/`:
+
+```powershell
+npm test
+npm run typecheck
+npm run lint
+npm run check:assets
+npm run build
+npm run preview:restart
+npm run smoke -- http://127.0.0.1:8081/ screenshots/built.png
+npm run preview:stop
+```
+
+O smoke usa Chrome instalado no Windows; em Linux, instale Chromium com `npx playwright install chromium`. O preview de produção atende somente http://127.0.0.1:8081/.
+
+## Biblioteca artística
+
+São 221 recursos catalogados: 183 aprovados e 38 em revisão. O jogo preserva o pacote aprovado de 183 entradas; pede 171 texturas durante a execução. Os arquivos usados foram comparados com os oficiais por ID, metadados, dimensões, frames e SHA-256. Recursos pendentes continuam excluídos e os fallbacks existentes continuam ativos.
+
+O bundle usa somente `game/public/`; não inclui a produção inteira em `assets/`. Quadros individuais e metadados já exportados foram preservados. Veja [Asset Factory](assets/README.md) e [integração Phaser](assets/12_docs/PHASER_INTEGRATION.md). As ferramentas da fábrica continuam relativas à própria pasta `assets/`:
+
+```powershell
+cd assets
+python -m pip install -r 11_tools/requirements.txt
+python 11_tools/qa.py
+python 11_tools/release.py
+python 11_tools/verify_publication.py
+```
+
+Não é necessário regenerar arte para iniciar o jogo. `dist/` e o ZIP aprovado são reconstruíveis e ficam fora do Git.
+
+## Desenvolvimento e publicação
+
+Use apenas o [repositório oficial](https://github.com/patrickbotarick/pixel-quest). Siga [WORKFLOW_GIT.md](docs/WORKFLOW_GIT.md) nos dois computadores. Para uma futura publicação Vercel, configure **Root Directory = game**; o preset Vercel e os recursos PWA exportados permanecem preservados. Esta migração não publica o jogo em um serviço de hospedagem.
+
+Auditoria, resultados e limites: [MIGRACAO_GROK_CODEX.md](docs/MIGRACAO_GROK_CODEX.md).

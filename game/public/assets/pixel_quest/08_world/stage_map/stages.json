@@ -1,0 +1,109 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "x": 145,
+      "y": 568,
+      "boss": false,
+      "region": "forest",
+      "icon": "ui.stage_normal",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 2,
+      "x": 440,
+      "y": 588,
+      "boss": false,
+      "region": "forest",
+      "icon": "ui.stage_normal",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 3,
+      "x": 100,
+      "y": 340,
+      "boss": false,
+      "region": "forest",
+      "icon": "ui.stage_normal",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 4,
+      "x": 255,
+      "y": 145,
+      "boss": false,
+      "region": "forest",
+      "icon": "ui.stage_normal",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 5,
+      "x": 475,
+      "y": 280,
+      "boss": true,
+      "region": "forest",
+      "icon": "ui.stage_boss",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 6,
+      "x": 815,
+      "y": 600,
+      "boss": false,
+      "region": "crystal",
+      "icon": "ui.stage_normal",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 7,
+      "x": 1080,
+      "y": 520,
+      "boss": false,
+      "region": "crystal",
+      "icon": "ui.stage_normal",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 8,
+      "x": 1065,
+      "y": 330,
+      "boss": false,
+      "region": "crystal",
+      "icon": "ui.stage_normal",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 9,
+      "x": 790,
+      "y": 200,
+      "boss": false,
+      "region": "crystal",
+      "icon": "ui.stage_normal",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    },
+    {
+      "stage": 10,
+      "x": 1150,
+      "y": 165,
+      "boss": true,
+      "region": "crystal",
+      "icon": "ui.stage_boss",
+      "locked_icon": "ui.stage_locked",
+      "complete_icon": "ui.stage_completed"
+    }
+  ],
+  "numbers": "Render live text; never baked into background"
+}

@@ -1,0 +1,32 @@
+{
+  "key": "crystal_sentinel.idle",
+  "texture_key": "crystal_sentinel.idle",
+  "texture_path": "03_enemies/crystal_sentinel/animations/crystal_sentinel_idle.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 96,
+    "frameHeight": 96,
+    "startFrame": 0,
+    "endFrame": 3,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "crystal_sentinel.idle",
+    "start": 0,
+    "end": 3,
+    "frameRate": 7,
+    "repeat": -1
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_idle_00.png",
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_idle_01.png",
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_idle_02.png",
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_idle_03.png"
+  ],
+  "production_status": "ready"
+}

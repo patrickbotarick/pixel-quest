@@ -1,8 +1,8 @@
 # Reproducible distribution; individual assets are the source of truth.
-/dist/
-/pixel_quest_approved_assets_v1.zip
+/assets/dist/
+/assets/pixel_quest_approved_assets_v1.zip
 # Initial source-registry snapshot, superseded by sources.json.
-/10_manifests/production_inputs.json
+/assets/10_manifests/production_inputs.json
 # Local runtimes and temporary files.
 __pycache__/
 *.py[cod]
@@ -13,7 +13,7 @@ tmp/
 .publication/
 *.tmp
 *.log
-09_previews/browser_cache/
+assets/09_previews/browser_cache/
 .env
 .env.*
 !.env.example
@@ -23,3 +23,19 @@ credentials.json
 service-account*.json
 .DS_Store
 Thumbs.db
+
+# Export original e staging: preservados localmente, nunca publicados.
+/.migration-backup/
+/.migration-repo/
+**/.tanstack/
+**/.vercel/
+**/.nitro/
+**/.output/
+**/dist/
+game/.node_modules.lock
+game/.grok/status
+game/.grok/*.pid
+game/screenshots/
+game/artifacts/
+game/.grok/*-feet.png
+*.tsbuildinfo

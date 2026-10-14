@@ -1,0 +1,32 @@
+{
+  "key": "forest_bat.defeat",
+  "texture_key": "forest_bat.defeat",
+  "texture_path": "03_enemies/forest_bat/animations/forest_bat_defeat.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 96,
+    "frameHeight": 96,
+    "startFrame": 0,
+    "endFrame": 3,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "forest_bat.defeat",
+    "start": 0,
+    "end": 3,
+    "frameRate": 7,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "03_enemies/forest_bat/sprites/forest_bat_defeat_00.png",
+    "03_enemies/forest_bat/sprites/forest_bat_defeat_01.png",
+    "03_enemies/forest_bat/sprites/forest_bat_defeat_02.png",
+    "03_enemies/forest_bat/sprites/forest_bat_defeat_03.png"
+  ],
+  "production_status": "ready"
+}

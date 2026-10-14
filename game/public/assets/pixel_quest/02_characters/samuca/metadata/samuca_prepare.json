@@ -1,0 +1,31 @@
+{
+  "key": "samuca.prepare",
+  "texture_key": "samuca.prepare",
+  "texture_path": "02_characters/samuca/animations/samuca_prepare.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "startFrame": 0,
+    "endFrame": 2,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "samuca.prepare",
+    "start": 0,
+    "end": 2,
+    "frameRate": 9,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "02_characters/samuca/sprites/samuca_prepare_00.png",
+    "02_characters/samuca/sprites/samuca_prepare_01.png",
+    "02_characters/samuca/sprites/samuca_prepare_02.png"
+  ],
+  "production_status": "ready"
+}

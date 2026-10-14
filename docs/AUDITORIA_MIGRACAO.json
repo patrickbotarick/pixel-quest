@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-14",
+  "sourceMain": "96cd42c563252d048abeb32296c41ccba6e39e6d",
+  "originalFiles": 1618,
+  "originalBytes": 23518163,
+  "backupCopiesVerified": 2,
+  "backupMismatches": [],
+  "dependencyVersionsChanged": [],
+  "secretCandidates": [],
+  "filesOver50MiB": [],
+  "forbiddenCandidates": []
+}

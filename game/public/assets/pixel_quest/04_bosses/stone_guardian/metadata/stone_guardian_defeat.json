@@ -1,0 +1,31 @@
+{
+  "key": "stone_guardian.defeat",
+  "texture_key": "stone_guardian.defeat",
+  "texture_path": "04_bosses/stone_guardian/animations/stone_guardian_defeat.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 192,
+    "frameHeight": 192,
+    "startFrame": 0,
+    "endFrame": 2,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "stone_guardian.defeat",
+    "start": 0,
+    "end": 2,
+    "frameRate": 7,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "04_bosses/stone_guardian/sprites/stone_guardian_defeat_00.png",
+    "04_bosses/stone_guardian/sprites/stone_guardian_defeat_01.png",
+    "04_bosses/stone_guardian/sprites/stone_guardian_defeat_02.png"
+  ],
+  "production_status": "ready"
+}

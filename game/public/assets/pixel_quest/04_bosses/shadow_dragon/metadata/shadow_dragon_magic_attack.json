@@ -1,0 +1,33 @@
+{
+  "key": "shadow_dragon.magic_attack",
+  "texture_key": "shadow_dragon.magic_attack",
+  "texture_path": "04_bosses/shadow_dragon/animations/shadow_dragon_magic_attack.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "startFrame": 0,
+    "endFrame": 4,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "shadow_dragon.magic_attack",
+    "start": 0,
+    "end": 4,
+    "frameRate": 10,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_magic_attack_00.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_magic_attack_01.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_magic_attack_02.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_magic_attack_03.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_magic_attack_04.png"
+  ],
+  "production_status": "ready"
+}

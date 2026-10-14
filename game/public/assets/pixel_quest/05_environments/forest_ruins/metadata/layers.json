@@ -1,0 +1,53 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "combat_baseline_y": 465,
+  "baseline_method": "First row of terrain with more than97% opaque coverage across viewport",
+  "challenge_safe_area": {
+    "x": 0,
+    "y": 530,
+    "width": 1280,
+    "height": 190
+  },
+  "parallax_mode": "bounded camera movement; layers are not certified seamless",
+  "layers": [
+    {
+      "id": "forest_ruins.distant",
+      "path": "05_environments/forest_ruins/layers/01_distant.png",
+      "depth": 10,
+      "scroll_factor": 0.1
+    },
+    {
+      "id": "forest_ruins.midground",
+      "path": "05_environments/forest_ruins/layers/02_midground.png",
+      "depth": 20,
+      "scroll_factor": 0.3
+    },
+    {
+      "id": "forest_ruins.scenery",
+      "path": "05_environments/forest_ruins/layers/03_scenery.png",
+      "depth": 30,
+      "scroll_factor": 0.65
+    },
+    {
+      "id": "forest_ruins.ground",
+      "path": "05_environments/forest_ruins/layers/04_ground.png",
+      "depth": 40,
+      "scroll_factor": 1
+    },
+    {
+      "id": "forest_ruins.foreground",
+      "path": "05_environments/forest_ruins/layers/05_foreground.png",
+      "depth": 50,
+      "scroll_factor": 1.08
+    },
+    {
+      "id": "forest_ruins.particles",
+      "path": "05_environments/forest_ruins/layers/06_particles.png",
+      "depth": 60,
+      "scroll_factor": 0.15
+    }
+  ]
+}

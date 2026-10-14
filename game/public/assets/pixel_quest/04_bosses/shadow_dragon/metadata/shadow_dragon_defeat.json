@@ -1,0 +1,35 @@
+{
+  "key": "shadow_dragon.defeat",
+  "texture_key": "shadow_dragon.defeat",
+  "texture_path": "04_bosses/shadow_dragon/animations/shadow_dragon_defeat.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "startFrame": 0,
+    "endFrame": 6,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "shadow_dragon.defeat",
+    "start": 0,
+    "end": 6,
+    "frameRate": 7,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_defeat_00.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_defeat_01.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_defeat_02.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_defeat_03.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_defeat_04.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_defeat_05.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_defeat_06.png"
+  ],
+  "production_status": "ready"
+}

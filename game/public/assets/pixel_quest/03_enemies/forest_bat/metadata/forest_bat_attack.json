@@ -1,0 +1,33 @@
+{
+  "key": "forest_bat.attack",
+  "texture_key": "forest_bat.attack",
+  "texture_path": "03_enemies/forest_bat/animations/forest_bat_attack.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 96,
+    "frameHeight": 96,
+    "startFrame": 0,
+    "endFrame": 4,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "forest_bat.attack",
+    "start": 0,
+    "end": 4,
+    "frameRate": 10,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "03_enemies/forest_bat/sprites/forest_bat_attack_00.png",
+    "03_enemies/forest_bat/sprites/forest_bat_attack_01.png",
+    "03_enemies/forest_bat/sprites/forest_bat_attack_02.png",
+    "03_enemies/forest_bat/sprites/forest_bat_attack_03.png",
+    "03_enemies/forest_bat/sprites/forest_bat_attack_04.png"
+  ],
+  "production_status": "ready"
+}
