@@ -1,0 +1,25 @@
+# Reproducible distribution; individual assets are the source of truth.
+/dist/
+/pixel_quest_approved_assets_v1.zip
+# Initial source-registry snapshot, superseded by sources.json.
+/10_manifests/production_inputs.json
+# Local runtimes and temporary files.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+tmp/
+.publication/
+*.tmp
+*.log
+09_previews/browser_cache/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+.DS_Store
+Thumbs.db

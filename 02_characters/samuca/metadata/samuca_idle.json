@@ -1,0 +1,32 @@
+{
+  "key": "samuca.idle",
+  "texture_key": "samuca.idle",
+  "texture_path": "02_characters/samuca/animations/samuca_idle.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "startFrame": 0,
+    "endFrame": 3,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "samuca.idle",
+    "start": 0,
+    "end": 3,
+    "frameRate": 7,
+    "repeat": -1
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "02_characters/samuca/sprites/samuca_idle_00.png",
+    "02_characters/samuca/sprites/samuca_idle_01.png",
+    "02_characters/samuca/sprites/samuca_idle_02.png",
+    "02_characters/samuca/sprites/samuca_idle_03.png"
+  ],
+  "production_status": "ready"
+}

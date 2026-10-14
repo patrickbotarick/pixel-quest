@@ -1,0 +1,36 @@
+{
+  "key": "dragon_attack.effect",
+  "texture_key": "dragon_attack.effect",
+  "texture_path": "07_vfx/dragon_attack/animations/dragon_attack_effect.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "startFrame": 0,
+    "endFrame": 7,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "dragon_attack.effect",
+    "start": 0,
+    "end": 7,
+    "frameRate": 14,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "individual_frames": [
+    "07_vfx/dragon_attack/sprites/dragon_attack_effect_00.png",
+    "07_vfx/dragon_attack/sprites/dragon_attack_effect_01.png",
+    "07_vfx/dragon_attack/sprites/dragon_attack_effect_02.png",
+    "07_vfx/dragon_attack/sprites/dragon_attack_effect_03.png",
+    "07_vfx/dragon_attack/sprites/dragon_attack_effect_04.png",
+    "07_vfx/dragon_attack/sprites/dragon_attack_effect_05.png",
+    "07_vfx/dragon_attack/sprites/dragon_attack_effect_06.png",
+    "07_vfx/dragon_attack/sprites/dragon_attack_effect_07.png"
+  ],
+  "production_status": "ready"
+}

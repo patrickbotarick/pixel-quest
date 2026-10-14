@@ -1,0 +1,85 @@
+{
+  "colors": [
+    {
+      "name": "forest",
+      "hex": "#315C48"
+    },
+    {
+      "name": "green",
+      "hex": "#67C58D"
+    },
+    {
+      "name": "blue",
+      "hex": "#24334C"
+    },
+    {
+      "name": "magic",
+      "hex": "#5B9BE6"
+    },
+    {
+      "name": "gold",
+      "hex": "#F2C567"
+    },
+    {
+      "name": "red",
+      "hex": "#E66D67"
+    },
+    {
+      "name": "purple",
+      "hex": "#9368D7"
+    },
+    {
+      "name": "cream",
+      "hex": "#FFF2D6"
+    },
+    {
+      "name": "dark",
+      "hex": "#182437"
+    },
+    {
+      "name": "outline",
+      "hex": "#101B2B"
+    },
+    {
+      "name": "gold_shadow",
+      "hex": "#98633F"
+    },
+    {
+      "name": "steel",
+      "hex": "#BACDDC"
+    },
+    {
+      "name": "white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "name": "cyan",
+      "hex": "#96E2DE"
+    },
+    {
+      "name": "moss",
+      "hex": "#548361"
+    },
+    {
+      "name": "brown",
+      "hex": "#72452F"
+    },
+    {
+      "name": "slate",
+      "hex": "#52627A"
+    },
+    {
+      "name": "hover",
+      "hex": "#354C6B"
+    },
+    {
+      "name": "disabled",
+      "hex": "#394759"
+    },
+    {
+      "name": "skin_highlight",
+      "hex": "#FFBFA2"
+    }
+  ],
+  "note": "Master colors for deterministic UI/VFX. Generated art uses additional colors; see used_colors.json."
+}

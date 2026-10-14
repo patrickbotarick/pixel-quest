@@ -1,0 +1,647 @@
+[
+  {
+    "id": "samuca",
+    "source": "02_characters/samuca/references/generated_source.png",
+    "category": "02_characters",
+    "columns": 6,
+    "rows": 6,
+    "size": 128,
+    "local_source": "02_characters/samuca/references/generated_source.png",
+    "row_counts": [
+      6,
+      6,
+      6,
+      7,
+      6,
+      6
+    ],
+    "y_cuts": [
+      0.0,
+      0.169921875,
+      0.3388671875,
+      0.51171875,
+      0.68359375,
+      0.8427734375,
+      1.0
+    ],
+    "row_cuts": {
+      "3": [
+        0.0,
+        0.166015625,
+        0.3190104166666667,
+        0.455078125,
+        0.5846354166666666,
+        0.7259114583333334,
+        0.859375,
+        1.0
+      ],
+      "4": [
+        0.0,
+        0.16276041666666666,
+        0.302734375,
+        0.4557291666666667,
+        0.6184895833333334,
+        0.7877604166666666,
+        1.0
+      ],
+      "5": [
+        0.0,
+        0.18229166666666666,
+        0.3450520833333333,
+        0.5143229166666666,
+        0.6803385416666666,
+        0.8333333333333334,
+        1.0
+      ]
+    },
+    "drop_indices": [
+      28
+    ],
+    "skip_animations": [
+      "victory",
+      "defeat"
+    ],
+    "issues": [],
+    "prompt_record": "Initial prompt summary: official Samuca style and identity; transparent animation sheet; requested pose sequence. Exact initial text is in chat tool history.",
+    "prompt": "Create a production animation sprite sheet of SAMUCA strictly matching the small combat/neutral character from the supplied official reference. Premium 16-bit pixel art with crisp pixel clusters, brown hair, one small gold lock, expressive eyes, blue tunic gold trim green cape brown boots metallic short sword. Transparent background, no text, no grid lines, no shadow under feet, no decorative sheet. Exactly 6 columns by 6 rows, 36 equally spaced complete sprites, generous empty margins in each cell. All same body scale, ground baseline and facing right 3/4, sword and cape never clipped. Ordered left-to-right then top-to-bottom: frames 1-4 idle breathing with cape and hair motion; 5-7 attack preparation lowering stance pulling sword back; 8-13 advance with six clearly distinct leg poses; 14-19 sword attack anticipation swing follow-through recovery (no big VFX); 20-22 hurt with recoil and expression; 23-28 victory raising sword and cheering; 29-32 friendly collapse defeat; 33-36 return walking backward into neutral stance. Every frame visibly distinct, coherent anatomy and identity. Equal cell grid layout is essential; each sprite must fit isolated inside its cell. Target each cell 96x96 at export, designed with that detail level."
+  },
+  {
+    "id": "mushroom",
+    "source": "03_enemies/mushroom/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "local_source": "03_enemies/mushroom/references/generated_source.png",
+    "prompt_record": "Initial prompt summary: official Samuca style and identity; transparent animation sheet; requested pose sequence. Exact initial text is in chat tool history.",
+    "prompt": "Use reference ONLY for crisp premium fantasy 16-bit pixel art style, palette and dark contours. Create one production sprite sheet for Pixel Quest's Cogumelo Travesso: mischievous expressive mushroom enemy, broad red cap with cream spots, beige face and stalk, little brown root feet, leaf accents. Friendly threat appropriate for children, distinct personality. Exactly 4 columns x 4 rows, 16 equal cells, each full isolated sprite centered with consistent scale and ground baseline, facing left 3/4. Transparent background no text no grid no shadows outside sprite. Read order: 1-4 idle (cap bounce, wink, roots move); 5-9 attack (crouch cap draws back, lean forward, headbutt lunge, overshoot, recovery); 10-12 damage (cap tilted, recoil, grimace); 13-16 defeat (cap droops, sits down, cap folds, gently collapses). Distinct body poses, not just translations/recolors, intact silhouettes, generous 15% blank margin per cell. No Samuca, no human protagonist. Designed for 96x96 exports."
+  },
+  {
+    "id": "slime_green",
+    "source": "03_enemies/slime_green/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "prompt": "Premium crisp fantasy 16-bit pixel art matching reference style and consistent top-left light, detailed shaded pixel clusters and dark contours, expressive child-appropriate creature. Exactly 4 columns by 4 rows, 16 equal cells of isolated transparent sprites, consistent scale, feet at same cell baseline, generous 15% empty margins, no text/grid/floor/shadow/background. Read left-to-right top-to-bottom: 1-4 idle with distinct body articulation; 5-9 attack anticipation/lunge/apex/follow-through/recovery; 10-12 damage recoil; 13-16 friendly collapse or magical dissolution defeat. Each frame clearly different, no cloned frames, whole silhouette never clipped. Designed for 96x96 exports. Face RIGHT. No protagonist. Subject: Slime Verde, emerald jelly creature with leafy antenna, pale lime belly, glossy highlights, big expressive dark eyes. Idle squash/stretch, attack body coils and launches forward, hurt splat recoil, defeat melts into harmless puddle. Body volume conserved; not a circle with a face.",
+    "row_counts": [
+      4,
+      5,
+      3,
+      4
+    ],
+    "local_source": "03_enemies/slime_green/references/generated_source.png",
+    "row_cuts": {
+      "1": [
+        0,
+        0.18,
+        0.39,
+        0.62,
+        0.82,
+        1
+      ]
+    },
+    "skip_animations": [
+      "attack"
+    ]
+  },
+  {
+    "id": "slime_blue",
+    "source": "03_enemies/slime_blue/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "prompt": "Premium crisp fantasy 16-bit pixel art matching reference style and consistent top-left light, detailed shaded pixel clusters and dark contours, expressive child-appropriate creature. Exactly 4 columns by 4 rows, 16 equal cells of isolated transparent sprites, consistent scale, feet at same cell baseline, generous 15% empty margins, no text/grid/floor/shadow/background. Read left-to-right top-to-bottom: 1-4 idle with distinct body articulation; 5-9 attack anticipation/lunge/apex/follow-through/recovery; 10-12 damage recoil; 13-16 friendly collapse or magical dissolution defeat. Each frame clearly different, no cloned frames, whole silhouette never clipped. Designed for 96x96 exports. Face RIGHT. No protagonist. STRICT GRID: row 1 exactly 4 idle; row 2 exactly first 4 attack; row 3 exactly attack recovery followed by 3 damage; row 4 exactly 4 defeat. NEVER put 5 sprites in row2. Horizontal spacing equal at x centers 12.5%,37.5%,62.5%,87.5%. Subject: Slime Azul, small sapphire water spirit with translucent blue jelly body, curved droplet crest, white frothy ruff, tiny finlike side limbs, pale cyan belly, huge expressive eyes. DIFFERENT silhouette and motion from green leaf slime. Idle crest undulates and fins paddle; attack forms a water wave, launches and settles; defeat dissolves into blue droplets. No leaf.",
+    "local_source": "03_enemies/slime_blue/references/generated_source.png"
+  },
+  {
+    "id": "forest_bat",
+    "source": "03_enemies/forest_bat/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "prompt": "Premium crisp fantasy 16-bit pixel art matching reference style and consistent top-left light, detailed shaded pixel clusters and dark contours, expressive child-appropriate creature. Exactly 4 columns by 4 rows, 16 equal cells of isolated transparent sprites, consistent scale, feet at same cell baseline, generous 15% empty margins, no text/grid/floor/shadow/background. Read left-to-right top-to-bottom: 1-4 idle with distinct body articulation; 5-9 attack anticipation/lunge/apex/follow-through/recovery; 10-12 damage recoil; 13-16 friendly collapse or magical dissolution defeat. Each frame clearly different, no cloned frames, whole silhouette never clipped. Designed for 96x96 exports. Face RIGHT. No protagonist. STRICT GRID: row 1 exactly 4 idle; row 2 exactly first 4 attack; row 3 exactly attack recovery followed by 3 damage; row 4 exactly 4 defeat. NEVER put 5 sprites in row2. Horizontal spacing equal at x centers 12.5%,37.5%,62.5%,87.5%. Subject: Morcego da Floresta, russet-brown bat, large pointed ears with peach interior, little green moss ruff, cream muzzle, amber eyes, dark emerald wing membranes. Detailed articulate wings. Idle four wingbeat phases extended/up/folded/down, attack swooping with claws then recovers, hurt curled wings, defeat curls on ground. Ensure wings wholly inside each cell and no adjacent sprites touch.",
+    "local_source": "03_enemies/forest_bat/references/generated_source.png"
+  },
+  {
+    "id": "forest_spirit",
+    "source": "03_enemies/forest_spirit/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "prompt": "Premium crisp fantasy 16-bit pixel art matching reference style and consistent top-left light, detailed shaded pixel clusters and dark contours, expressive child-appropriate creature. Exactly 4 columns by 4 rows, 16 equal cells of isolated transparent sprites, consistent scale, feet at same cell baseline, generous 15% empty margins, no text/grid/floor/shadow/background. Read left-to-right top-to-bottom: 1-4 idle with distinct body articulation; 5-9 attack anticipation/lunge/apex/follow-through/recovery; 10-12 damage recoil; 13-16 friendly collapse or magical dissolution defeat. Each frame clearly different, no cloned frames, whole silhouette never clipped. Designed for 96x96 exports. Face RIGHT. No protagonist. STRICT GRID: row 1 exactly 4 idle; row 2 exactly first 4 attack; row 3 exactly attack recovery followed by 3 damage; row 4 exactly 4 defeat. NEVER put 5 sprites in row2. Horizontal spacing equal at x centers 12.5%,37.5%,62.5%,87.5%. Subject: Espírito da Floresta, small ancient woodland guardian with expressive wooden-mask face, moss eyebrows, leafy crown, twisted twig arms, root feet, jade wisps from bark, layered foliage robe. A distinct humanoid tree spirit, NOT slime. Idle leaves sway and branches articulate; attack vine-hand reach with real arm poses; damage mask grimace; defeat folds into a sapling. No floor, all branches inside cells.",
+    "local_source": "03_enemies/forest_spirit/references/generated_source.png"
+  },
+  {
+    "id": "crystal_creature",
+    "source": "03_enemies/crystal_creature/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "prompt": "Premium crisp fantasy 16-bit pixel art matching reference style and consistent top-left light, detailed shaded pixel clusters and dark contours, expressive child-appropriate creature. Exactly 4 columns by 4 rows, 16 equal cells of isolated transparent sprites, consistent scale, feet at same cell baseline, generous 15% empty margins, no text/grid/floor/shadow/background. Read left-to-right top-to-bottom: 1-4 idle with distinct body articulation; 5-9 attack anticipation/lunge/apex/follow-through/recovery; 10-12 damage recoil; 13-16 friendly collapse or magical dissolution defeat. Each frame clearly different, no cloned frames, whole silhouette never clipped. Designed for 96x96 exports. Face RIGHT. No protagonist. STRICT GRID: row 1 exactly 4 idle; row 2 exactly first 4 attack; row 3 exactly attack recovery followed by 3 damage; row 4 exactly 4 defeat. NEVER put 5 sprites in row2. Horizontal spacing equal at x centers 12.5%,37.5%,62.5%,87.5%. Subject: Cristal Vivo, angular amethyst crystal creature with asymmetric faceted violet body, bright cyan core, two short stone feet, small orbiting crystal shards as arms, expressive luminous eyes carved in crystal. NOT humanoid sentinel. Idle facets rotate subtly and arms move; attack shards point and fire forward; recoil crack-light damage without gore; defeat facets fall into a little safe crystal heap. Each shape multi-faceted and shaded.",
+    "local_source": "03_enemies/crystal_creature/references/generated_source.png"
+  },
+  {
+    "id": "crystal_bat",
+    "source": "03_enemies/crystal_bat/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "prompt": "Premium crisp fantasy 16-bit pixel art matching reference style and consistent top-left light, detailed shaded pixel clusters and dark contours, expressive child-appropriate creature. Exactly 4 columns by 4 rows, 16 equal cells of isolated transparent sprites, consistent scale, feet at same cell baseline, generous 15% empty margins, no text/grid/floor/shadow/background. Read left-to-right top-to-bottom: 1-4 idle with distinct body articulation; 5-9 attack anticipation/lunge/apex/follow-through/recovery; 10-12 damage recoil; 13-16 friendly collapse or magical dissolution defeat. Each frame clearly different, no cloned frames, whole silhouette never clipped. Designed for 96x96 exports. Face RIGHT. No protagonist. STRICT GRID: row 1 exactly 4 idle; row 2 exactly first 4 attack; row 3 exactly attack recovery followed by 3 damage; row 4 exactly 4 defeat. NEVER put 5 sprites in row2. Horizontal spacing equal at x centers 12.5%,37.5%,62.5%,87.5%. Subject: Morcego de Cristal, bat made of deep-blue crystal with angular amethyst wings and translucent cyan wing facets, diamond ears, glowing expressive eyes, shard tail. Wing hinges articulated, no brown fur or moss. Idle four distinct wingbeat poses, attack streamlined dive with folded then spread wings, damage cracks softly light up, defeat folds then dissolves to gem shards. Keep every wing inside its cell.",
+    "local_source": "03_enemies/crystal_bat/references/generated_source.png"
+  },
+  {
+    "id": "ghost",
+    "source": "03_enemies/ghost/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "prompt": "Premium crisp fantasy 16-bit pixel art matching reference style and consistent top-left light, detailed shaded pixel clusters and dark contours, expressive child-appropriate creature. Exactly 4 columns by 4 rows, 16 equal cells of isolated transparent sprites, consistent scale, feet at same cell baseline, generous 15% empty margins, no text/grid/floor/shadow/background. Read left-to-right top-to-bottom: 1-4 idle with distinct body articulation; 5-9 attack anticipation/lunge/apex/follow-through/recovery; 10-12 damage recoil; 13-16 friendly collapse or magical dissolution defeat. Each frame clearly different, no cloned frames, whole silhouette never clipped. Designed for 96x96 exports. Face RIGHT. No protagonist. STRICT GRID: row 1 exactly 4 idle; row 2 exactly first 4 attack; row 3 exactly attack recovery followed by 3 damage; row 4 exactly 4 defeat. NEVER put 5 sprites in row2. Horizontal spacing equal at x centers 12.5%,37.5%,62.5%,87.5%. Subject: Fantasminha, playful floating ghost with ivory and pale blue wispy cloak body, translucent lavender shadows, a little hood peak, expressive deep-blue oval eyes, tiny mitten hands, curling tail. No skull no scary gore. Idle body sways and hands wave, attack opens cloak with magical puff then folds, damage astonished recoil, defeat gradually shrinks into a small peaceful wisp. NOT slime. Preserve outline of tail with generous empty cell margins.",
+    "local_source": "03_enemies/ghost/references/generated_source.png"
+  },
+  {
+    "id": "crystal_sentinel",
+    "source": "03_enemies/crystal_sentinel/references/generated_source.png",
+    "category": "03_enemies",
+    "columns": 4,
+    "rows": 4,
+    "size": 96,
+    "prompt": "Premium crisp fantasy 16-bit pixel art matching reference style and consistent top-left light, detailed shaded pixel clusters and dark contours, expressive child-appropriate creature. Exactly 4 columns by 4 rows, 16 equal cells of isolated transparent sprites, consistent scale, feet at same cell baseline, generous 15% empty margins, no text/grid/floor/shadow/background. Read left-to-right top-to-bottom: 1-4 idle with distinct body articulation; 5-9 attack anticipation/lunge/apex/follow-through/recovery; 10-12 damage recoil; 13-16 friendly collapse or magical dissolution defeat. Each frame clearly different, no cloned frames, whole silhouette never clipped. Designed for 96x96 exports. Face RIGHT. No protagonist. STRICT GRID: row 1 exactly 4 idle; row 2 exactly first 4 attack; row 3 exactly attack recovery followed by 3 damage; row 4 exactly 4 defeat. NEVER put 5 sprites in row2. Horizontal spacing equal at x centers 12.5%,37.5%,62.5%,87.5%. Subject: Sentinela de Cristal, compact magical armored knight automaton built from midnight-blue stone and amethyst plates, luminous cyan visor, pointed crystal helmet, gold runic trim, one angular crystalline spear and broad shield. Clearly articulated humanoid limbs and knight silhouette, different from crystal creature. Idle guarded stance shifts; attack spear pullback thrust followthrough return; hurt shield recoils and knee bends; defeat kneels and armor settles. No human face. Every spear and shield stays wholly inside cell.",
+    "local_source": "03_enemies/crystal_sentinel/references/generated_source.png"
+  },
+  {
+    "id": "stone_guardian",
+    "source": "04_bosses/stone_guardian/references/generated_source.png",
+    "category": "04_bosses",
+    "columns": 6,
+    "rows": 5,
+    "size": 192,
+    "prompt": "Use supplied official Samuca reference for premium fantasy 16-bit pixel art style only. Create production sprite sheet for boss Guardião de Pedra: imposing large ancient golem formed of shaded rock slabs, moss, jade crystal core and blue glowing runes, broad shoulders huge rock fists, articulate stone limbs, kind but formidable face. Transparent background no text/grid/shadows, no Samuca. EXACT 6 columns x 5 rows = 30 full isolated sprites with identical scale and anchor; each fits inside cell with empty margins all around. Read left to right top to bottom: 1-4 idle shifting weight, 5-8 windup drawing fists overhead, 9-14 ground slam (raise, crouch, downward arms, impact, recoil, recovery), 15-17 hurt crack-light recoil, 18-21 transition from crouch to broad upright guard, 22-26 peaceful defeat kneeling and settling into stones, 27-30 entrance (emerging from compact stone stack to full golem). Every frame visibly different real limb articulation, not simple translation. Keep large dust and impact VFX OUTSIDE this sheet; rendered separately later. Whole fists within margins. Designed for 192x192 exports. Rows strictly SIX sprites each; never shift counts for animation lengths.",
+    "local_source": "04_bosses/stone_guardian/references/generated_source.png",
+    "specs": [
+      [
+        "idle",
+        4,
+        6,
+        true
+      ],
+      [
+        "prepare",
+        5,
+        8,
+        false
+      ],
+      [
+        "ground_impact",
+        5,
+        10,
+        false
+      ],
+      [
+        "hurt",
+        4,
+        8,
+        false
+      ],
+      [
+        "posture_transition",
+        6,
+        8,
+        false
+      ],
+      [
+        "defeat",
+        3,
+        7,
+        false
+      ],
+      [
+        "entrance",
+        3,
+        7,
+        false
+      ]
+    ],
+    "issues": [
+      "Counts follow observed source poses; ground impact and entrance require temporal review"
+    ]
+  },
+  {
+    "id": "shadow_dragon",
+    "source": "04_bosses/shadow_dragon/references/generated_source.png",
+    "category": "04_bosses",
+    "columns": 6,
+    "rows": 6,
+    "size": 256,
+    "prompt": "Use supplied official Samuca reference for premium fantasy 16-bit crisp pixel art style ONLY. Sprite sheet of boss Dragão das Sombras, imposing expressive dark indigo/violet dragon with large bat wings, silver horns, cyan luminous eyes, segmented belly and elegant curling tail, magical crystal accents; appropriate for children, no gore. REAL transparent background no text/grid/floor shadows. Exactly 6 columns x 6 rows, 36 full isolated sprites, same dragon identity and scale, facing right, 15% blank margin in every equal cell, entire wings/tail intact. Strict 6 sprites each row regardless of animation lengths. Read left to right top to bottom: 1-4 idle wing cycle; 5-8 prepare magic opening jaw and coiling; 9-13 magic attack gesture/breath/followthrough; 14-16 hurt recoil; 17-20 transformation gradually adds bright cyan crystal armor, brighter horns and luminous wing veins; 21-24 second phase idle with cyan crystal armor and crown prominent (CLEAR silhouette change, not only recolor); 25-29 second phase powerful magic attack; 30-36 peaceful final defeat wings fold kneel settle dissolve into harmless purple wisps. Never duplicate frames; articulate wings/limbs/jaw. No big VFX or projectile drawn outside dragon (separate later). Designed for 256x256 export.",
+    "local_source": "04_bosses/shadow_dragon/references/generated_source.png",
+    "issues": [
+      "Wing/tail source boundaries and scaling of replacement phase2 attack require visual review"
+    ],
+    "frame_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      11,
+      10,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      28,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "skip_animations": [
+      "phase2_attack"
+    ]
+  },
+  {
+    "id": "enchanted_forest.distant",
+    "source": "00_references/generated/enchanted_forest_distant.png",
+    "category": "environments",
+    "kind": "image",
+    "target_size": [
+      1280,
+      720
+    ],
+    "export_path": "05_environments/enchanted_forest/layers/01_distant.png",
+    "prompt": "Pixel Quest game environment production art: enchanted forest, premium fantasy 16-bit pixel clusters, consistent with supplied official Samuca style, not a mockup. Wide 16:9 landscape. ONLY distant backdrop layer: luminous blue sky, cream clouds, softly shaded distant mountains, distant misty green forest canopy near horizon at 60% height, warm morning rays top-left, magical inviting depth. Empty central combat area; no close trees, no ground platform, no large foreground plants. No characters no HUD no text no numbers. Forest #315C48 green #67C58D blue #24334C gold #F2C567 cream #FFF2D6. Dense beautiful detail in far mountains/clouds but lower third low visual noise for challenge panel. Intended export1280x720 nearest pixel sampling, opaque.",
+    "local_source": "00_references/generated/enchanted_forest_distant.png"
+  },
+  {
+    "id": "enchanted_forest.props",
+    "source": "05_environments/enchanted_forest/references/generated_props.png",
+    "category": "05_environments",
+    "kind": "props",
+    "environment": "enchanted_forest",
+    "columns": 2,
+    "rows": 3,
+    "prompt": "Pixel Quest enchanted forest environment transparent PROP ATLAS for layered composition. Style matches reference premium16-bit crisp pixel art, top-left sunlight, green #315C48/#67C58D cream/gold accents. Exactly 2 columns x3 rows, 6 equal cells, transparent background NO texts/grid/shadows/characters/HUD. Every object complete inside its cell with blank margins. Cell1 (top-left): lush group of tall layered deciduous trees with trunks and rich shaded canopy, midground. Cell2(top-right): decorative cluster of rounded rocks, red mushrooms, cream flowers, ferns, scenic prop. Cell3(middle-left): wide horizontal grass-covered earth platform cross-section, level WALKABLE TOP EDGE, substantial brown rocky soil underneath; full rectangle of terrain with side edges intact. Cell4(middle-right): leafy bush and fern cluster for foreground corner, flowers. Cell5(bottom-left): isolated sparse golden fireflies and small diamond sparkles on transparency, not a solid glow field. Cell6(bottom-right): isolated slender soft golden diagonal sunrays made from discrete pixel clusters, no background. Do not render assembled scene: six independently extractable props. Cell contents do not cross boundaries. No reference character.",
+    "local_source": "05_environments/enchanted_forest/references/generated_props.png",
+    "boxes": [
+      [
+        0,
+        0,
+        0.56,
+        0.43
+      ],
+      [
+        0.57,
+        0.09,
+        1,
+        0.43
+      ],
+      [
+        0,
+        0.45,
+        0.64,
+        0.71
+      ],
+      [
+        0.65,
+        0.43,
+        1,
+        0.72
+      ],
+      [
+        0.03,
+        0.73,
+        0.54,
+        1
+      ],
+      [
+        0.56,
+        0.72,
+        1,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "forest_ruins.distant",
+    "source": "00_references/generated/forest_ruins_distant.png",
+    "category": "environments",
+    "kind": "image",
+    "target_size": [
+      1280,
+      720
+    ],
+    "export_path": "05_environments/forest_ruins/layers/01_distant.png",
+    "prompt": "Pixel Quest Ruínas da Floresta game distant backdrop layer, premium fantasy16-bit crisp pixel art matching reference. Wide16:9, ancient forest ruin vista with distant stone arches and worn columns, tiny cyan glowing runic marks, sunlit moss and ivy, misty trees receding into forest, warm light from upper-left. Keep CENTRAL AREA EMPTY for boss combat, structures on side margins and far horizon, lower third subtle dark forest tones for challenge panel. NO close foreground props, NO characters/HUD/text, no large floating UI runes. Opaque art1280x720 export. Forest#315C48 green#67C58D blue#24334C gold#F2C567 cream#FFF2D6.",
+    "local_source": "00_references/generated/forest_ruins_distant.png"
+  },
+  {
+    "id": "forest_ruins.props",
+    "source": "05_environments/forest_ruins/references/generated_props.png",
+    "category": "05_environments",
+    "kind": "props",
+    "environment": "forest_ruins",
+    "columns": 2,
+    "rows": 3,
+    "prompt": "Pixel Quest forest ruins transparent PROP ATLAS for 6 independently extractable objects, premium16-bit crisp pixel art matching reference, top-left sunlight moss green cream stone cyan runes. EXACT2 columns x3 rows with equal cell boundaries x50%, y33.3%/66.6%. Contents never cross cell boundaries, blank10% margins. Cell1top-left tall worn stone column with moss ivy cyan rune, a distant arch segment. Cell2top-right small cluster of fallen carved stones and ferns/flowers. Cell3middle-left wide flat-topped ancient stone battle platform, grass along level top edge, masonry cross-section under it. Cell4middle-right foreground bush with broken stone carved fragments. Cell5bottom-left sparse small turquoise magic motes and gold fireflies. Cell6bottom-right isolated diagonal golden ray overlay. Transparent no ground/background except platform object, no characters no text/grid. Each sprite complete; avoid cutting column top. Each object less than40% canvas width and25% canvas height.",
+    "local_source": "05_environments/forest_ruins/references/generated_props.png",
+    "boxes": [
+      [
+        0.12,
+        0,
+        0.45,
+        0.43
+      ],
+      [
+        0.57,
+        0.12,
+        0.97,
+        0.43
+      ],
+      [
+        0.03,
+        0.46,
+        0.55,
+        0.72
+      ],
+      [
+        0.58,
+        0.46,
+        0.96,
+        0.72
+      ],
+      [
+        0.04,
+        0.73,
+        0.49,
+        1
+      ],
+      [
+        0.55,
+        0.72,
+        0.96,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "crystal_cave.distant",
+    "source": "00_references/generated/crystal_cave_distant.png",
+    "category": "environments",
+    "kind": "image",
+    "target_size": [
+      1280,
+      720
+    ],
+    "export_path": "05_environments/crystal_cave/layers/01_distant.png",
+    "prompt": "Pixel Quest Cavernas de Cristal, production distant environment backdrop, premium fantasy16-bit crisp pixel art matching reference art style. Wide16:9 cave vista with immense deep cavern receding in layers of indigo rock, luminous blue/amethyst crystal clusters at side margins and far back, blue-purple reflected pools, atmospheric depth, small magic motes, dramatic but welcoming light from upper-left crystals. Empty broad CENTRAL COMBAT AREA, lower third low-detail dark tones for challenge panel. No characters no HUD no text. Opaque art. Palette#24334C#5B9BE6#9368D7#182437#FFF2D6. Texture detail via clean pixel clusters, no blur or photorealism.",
+    "local_source": "00_references/generated/crystal_cave_distant.png"
+  },
+  {
+    "id": "crystal_cave.props",
+    "source": "05_environments/crystal_cave/references/generated_props.png",
+    "category": "05_environments",
+    "kind": "props",
+    "environment": "crystal_cave",
+    "columns": 2,
+    "rows": 3,
+    "prompt": "Pixel Quest crystal cavern transparent PROP ATLAS, matching premium16-bit crisp pixel art, blue/purple lighting from upper-left. Six separate objects in2columns x3rows, each fits wholly inside equal cell with10% empty margins, no text/grid. Top-left: tall stalagmite rock formation with cyan/amethyst crystals. Top-right: small faceted crystal cluster on dark stones with glowing cyan reflections. Middle-left: broad horizontal flat-topped walkable stone platform with dark-indigo stratified rock cross-section, tiny crystals ONLY near edges. Middle-right: low foreground rock and purple crystal corner cluster. Bottom-left: isolated sparse cyan and violet magical diamond particles on transparent. Bottom-right: a thin blue magical light veil/small rays, isolated transparent overlay. No characters no HUD no assembled scene. Whole objects never touch neighboring cells. Palette#24334C#5B9BE6#9368D7#182437#FFF2D6.",
+    "local_source": "05_environments/crystal_cave/references/generated_props.png",
+    "boxes": [
+      [
+        0.1,
+        0,
+        0.52,
+        0.45
+      ],
+      [
+        0.6,
+        0.1,
+        0.94,
+        0.45
+      ],
+      [
+        0.025,
+        0.46,
+        0.59,
+        0.71
+      ],
+      [
+        0.61,
+        0.46,
+        0.98,
+        0.73
+      ],
+      [
+        0.06,
+        0.72,
+        0.53,
+        1
+      ],
+      [
+        0.58,
+        0.71,
+        0.98,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "crystal_sanctuary.distant",
+    "source": "00_references/generated/crystal_sanctuary_distant.png",
+    "category": "environments",
+    "kind": "image",
+    "target_size": [
+      1280,
+      720
+    ],
+    "export_path": "05_environments/crystal_sanctuary/layers/01_distant.png",
+    "prompt": "Pixel Quest Santuário dos Cristais final-boss environment backdrop, premium fantasy16-bit crisp pixel clusters matching official reference style. Wide16:9 majestic magical sanctuary with immense crystalline columns at left/right margins, ancient ceremonial architecture with gold trim, blue and purple floating crystal spires beyond a central arc, fantastical starry deep-blue sky, luminous magical energy, dramatic top-left blue light. CENTRAL BATTLE ARENA EMPTY, flat broad open space, main focus above lower challenge-panel zone. Lower third dark blue subtle stone. No dragon no hero no enemies no HUD no text. Opaque background, palette#24334C#5B9BE6#9368D7#F2C567#FFF2D6#182437. Child appropriate magical atmosphere, no horror.",
+    "local_source": "00_references/generated/crystal_sanctuary_distant.png"
+  },
+  {
+    "id": "crystal_sanctuary.props",
+    "source": "05_environments/crystal_sanctuary/references/generated_props.png",
+    "category": "05_environments",
+    "kind": "props",
+    "environment": "crystal_sanctuary",
+    "columns": 2,
+    "rows": 3,
+    "prompt": "Pixel Quest crystal sanctuary transparent PROP ATLAS, premium16-bit crisp pixel clusters matching reference style. Exactly2 columns x3rows, six isolated objects, every object fully inside cell with15% empty margins, do not cross boundaries. Cell1: tall ornate gold-trimmed magical column bearing floating cyan/amethyst crystal. Cell2: small cluster of purple blue crystals on ancient carved stone pedestal with gold rune inlay. Cell3: broad flat level-topped ceremonial stone battle platform, gold inlay edge, indigo masonry cross-section underneath, no arches on top. Cell4: low foreground carved stone and faceted crystal cluster. Cell5: sparse isolated cyan violet golden magical motes and diamond stars. Cell6: isolated translucent blue-purple magical energy wisps/veil with discrete crisp pixels. Transparent background no text/grid/characters/HUD. Palette#24334C#5B9BE6#9368D7#F2C567#FFF2D6.",
+    "local_source": "05_environments/crystal_sanctuary/references/generated_props.png",
+    "boxes": [
+      [
+        0.1,
+        0,
+        0.44,
+        0.4
+      ],
+      [
+        0.55,
+        0.09,
+        0.95,
+        0.4
+      ],
+      [
+        0,
+        0.44,
+        0.58,
+        0.69
+      ],
+      [
+        0.6,
+        0.43,
+        0.99,
+        0.69
+      ],
+      [
+        0,
+        0.71,
+        0.48,
+        1
+      ],
+      [
+        0.52,
+        0.71,
+        1,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "world.stage_map.background",
+    "source": "00_references/generated/world_stage_map_background.png",
+    "category": "world",
+    "kind": "image",
+    "target_size": [
+      1280,
+      720
+    ],
+    "export_path": "08_world/stage_map/background.png",
+    "prompt": "Pixel Quest illustrated stage-map BACKGROUND only, premium fantasy16-bit pixel art matching official reference style. Wide16:9 top-down angled fantasy map, lush enchanted forest region occupying LEFT HALF, ancient forest ruin landmark near middle-left, blue/amethyst crystal cave region RIGHT HALF, magnificent crystalline sanctuary landmark far upper-right. Rich miniature trees, hills, rivers, tiny stone bridges, caves and crystals, warm top-left light, balanced navy/green/gold/violet/cream palette. Keep open grassy or rocky clearings in ten distributed areas for later INTERACTIVE STAGE ICONS. NO path/trail, NO dots/circles/nodes, NO numbers, NO labels/text, NO legend, NO UI, NO characters, NO frame. The numbered stages and connecting trail are rendered separately. Dense crafted premium pixel-world illustration, readable at1280x720.",
+    "local_source": "00_references/generated/world_stage_map_background.png"
+  },
+  {
+    "id": "world.ending",
+    "source": "00_references/generated/world_ending.png",
+    "category": "world",
+    "kind": "image",
+    "target_size": [
+      1280,
+      720
+    ],
+    "export_path": "08_world/ending/samuca_crystals_recovered.png",
+    "prompt": "Pixel Quest final ending illustration. STRICT identity of SAMUCA from provided official reference: same chibi brown hair small golden lock big eyes blue tunic gold trim green cape brown boots short metal sword. Premium16-bit crisp pixel art, wide16:9. Samuca happily celebrating recovery of magical blue and purple crystals in a lush forest clearing at sunrise, standing on small grassy stone mound, holding recovered crystal overhead, joyful eyes and expression, sword safely sheathed at belt. Three recovered crystals glowing softly beside him, forest leaves flowers moss rocks distant mountains and sanctuary now peaceful. Hero at left-center, tasteful empty dark-green gradient area right-third for Phaser-rendered ending text (NO baked text). Top-left warm sunlight. No UI, no labels, no captions, no borders, no other hero design, no extra characters. Consistent reference face silhouette costume colors; detailed premium illustration appropriate for children.",
+    "local_source": "00_references/generated/world_ending.png"
+  },
+  {
+    "id": "samuca_victory",
+    "asset_id": "samuca",
+    "source": "02_characters/samuca/references/generated_victory_source.png",
+    "category": "02_characters",
+    "columns": 3,
+    "rows": 2,
+    "size": 128,
+    "specs": [
+      [
+        "victory",
+        6,
+        9,
+        false
+      ]
+    ],
+    "prompt": "Production animation spritesheet ONLY Samuca victory from provided official identity reference. SAME brown hair small gold lock big eyes blue tunic gold trim green cape brown boots. Exactly SIX full sprites in a STRICT3columns x2rows equal-cell grid, no more no less. Transparent background. Premium crisp16-bit pixel art, designed for96x96frames. Samuca has exactly ONE short metallic sword in RIGHT hand in each frame; left hand EMPTY in joyful fist. No other sword at belt, no duplicated weapons. Frame1 starts raising sword, frame2 sword overhead open eyes smile, frame3 fist pumps, frame4 knees bend for little happy hop, frame5 mid-hop cape flies eyes happy closed, frame6 lands cheerful ready to return idle. Consistent head/body proportions and scale, facing right3/4, precise uniform baseline; all sword cape hair entire inside generous15% cell margins. NO stars or marks around head, NO decorative sheet border, NO text/grid/ground/shadows. Every frame truly articulated distinct limb pose; preserve official character face and costume.",
+    "local_source": "02_characters/samuca/references/generated_victory_source.png",
+    "scale_limit": 0.18,
+    "y_cuts": [
+      0,
+      0.52,
+      1
+    ]
+  },
+  {
+    "id": "slime_green_attack",
+    "asset_id": "slime_green",
+    "source": "03_enemies/slime_green/references/generated_attack_source.png",
+    "category": "03_enemies",
+    "columns": 5,
+    "rows": 1,
+    "size": 96,
+    "specs": [
+      [
+        "attack",
+        5,
+        10,
+        false
+      ]
+    ],
+    "prompt": "Pixel Quest ORIGINAL green leaf slime from style of official reference, emerald jelly creature leafy antenna pale lime belly glossy highlights expressive dark eyes; premium crisp16-bit pixel art. Create exactly FIVE independent attack frames in a SINGLE HORIZONTAL ROW on a wide canvas, all full isolated with very generous blank margins (20%) between poses. Transparent background, no effects outside body no detached droplets/rays, NO text/grid. Same scale each frame. 1 crouches coiling jelly body,2 draws leafy crest back,3 elongated forward lunge with face facingRIGHT,4 squashed forward landing,5 rounded recovery. Whole body/leaf entirely visible. Never overlap poses, every frame different body articulation not translation. This is an attack animation, no idle hurt defeat additional sprites. Equal five cells across one row, body center y60% baseline75%, blank above and below. Intended96x96export.",
+    "local_source": "03_enemies/slime_green/references/generated_attack_source.png",
+    "scale_limit": 0.2
+  },
+  {
+    "id": "samuca_defeat",
+    "asset_id": "samuca",
+    "source": "02_characters/samuca/references/generated_defeat_source.png",
+    "category": "02_characters",
+    "columns": 2,
+    "rows": 2,
+    "size": 128,
+    "specs": [
+      [
+        "defeat",
+        4,
+        7,
+        false
+      ]
+    ],
+    "prompt": "Pixel Quest SAMUCA gentle defeat animation, strict identity of supplied official reference: chibi brown hair one small gold lock expressive eyes blue tunic gold trim green cape brown boots one short metal sword. Premium crisp16-bit pixel art. EXACT4 frames in STRICT2columns x2rows with15% blank cell margins, transparent background no text/grid/symbols/VFX/ground/shadows. FacingRIGHT. Frame1 staggers with knees buckling and surprised/hurt face, sword lowered. Frame2 falls on knees with green cape folding and hand bracing. Frame3 rests face-down safely on folded arms, eyes closed, sword lies beside hand. Frame4 stays resting but adjusts to a comfortable side-resting pose, cape gently settles, same scale and baseline. NO standing up/recovery pose. Child friendly no injury/blood, graceful squash and body articulation. Whole sword/cape/hair intact in every equal cell. Designed128x128 export with characterbody heightaround65px.",
+    "local_source": "02_characters/samuca/references/generated_defeat_source.png",
+    "scale_limit": 0.14
+  },
+  {
+    "id": "shadow_dragon_phase2_attack",
+    "asset_id": "shadow_dragon",
+    "source": "04_bosses/shadow_dragon/references/generated_phase2_attack_source.png",
+    "category": "04_bosses",
+    "columns": 5,
+    "rows": 1,
+    "size": 256,
+    "specs": [
+      [
+        "phase2_attack",
+        5,
+        10,
+        false
+      ]
+    ],
+    "prompt": "Image1 official reference gives premium crisp16-bit pixel art STYLE. Image2 is EXACT Shadow Dragon identity to preserve: indigo violet body silver horns cyan eyes segmented cream belly curled shard tail, PHASE2 has bright cyan crystalline shoulder/neck armor crown and blue luminous veins across violet wings. Create ONLY5 attack frames of this same phase2 dragon, facingRIGHT, single horizontal row of FIVE equal isolated cells on wide3:1 canvas. Very generous15% empty margins, whole tail/wings/horns/claws inside each cell, sprites never touch or overlap. Transparent background no text/grid/floor/shadows.1 crouches drawing head back and folding wings,2 raises chest jaw opens charging,3 head and claw thrust forward magic casting but NO drawn projectile,4 body follows through wings spread,5 recovers to standing wingfold idle. Every frame distinct coherent articulation. No separate effects outside dragon; magic projectile is separate VFX. Preserve exact dragon proportions, anatomy and phase2 crystalline armor in ALL5 frames, no redesign, no copying identical poses. Designed256x256 export.",
+    "local_source": "04_bosses/shadow_dragon/references/generated_phase2_attack_source.png"
+  }
+]

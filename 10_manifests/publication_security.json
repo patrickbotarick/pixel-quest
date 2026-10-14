@@ -1,0 +1,40 @@
+{
+  "all_passed": true,
+  "files_reviewed": 937,
+  "text_files_scanned": 140,
+  "original_images_byte_identical": 797,
+  "secret_patterns_checked": [
+    "private_key",
+    "github_token",
+    "aws_access_key",
+    "openai_key",
+    "google_key",
+    "credential_uri",
+    "credential_assignment"
+  ],
+  "secret_findings": 0,
+  "scope": "Versioned text files and forbidden filenames; heuristic scan, not a proof of absence of every possible secret",
+  "file_bytes": 72675631,
+  "largest_file": "00_references/generated/world_stage_map_background.png",
+  "largest_file_bytes": 3368189,
+  "files_by_directory": {
+    ".gitattributes": 1,
+    ".gitignore": 1,
+    "00_references": 10,
+    "01_brand": 1,
+    "02_characters": 67,
+    "03_enemies": 235,
+    "04_bosses": 105,
+    "05_environments": 56,
+    "06_ui": 67,
+    "07_vfx": 216,
+    "08_world": 7,
+    "09_previews": 125,
+    "10_manifests": 16,
+    "11_tools": 17,
+    "12_docs": 12,
+    "README.md": 1
+  },
+  "excluded_distribution": true,
+  "git_lfs_required": false
+}

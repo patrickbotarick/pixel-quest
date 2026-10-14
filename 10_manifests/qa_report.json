@@ -1,0 +1,1921 @@
+{
+  "schema_version": "1.0",
+  "png_files_verified": 714,
+  "manifest_entries": 221,
+  "spritesheets": 83,
+  "animation_frames": 414,
+  "status_counts": {
+    "ready": 183,
+    "needs_review": 38
+  },
+  "errors": [],
+  "warnings": [
+    "slime_blue.attack: Source includes large water trails across cell boundaries; separate and retouch effects before approval.",
+    "forest_spirit.attack: Vine reach approaches source cell boundaries; inspect branch tips and remove baked motion marks.",
+    "crystal_creature.attack: Projectile streaks are baked into the source; detach projectile and confirm shard tips.",
+    "crystal_bat.attack: Baked cyan sweep and source boundary overlap need cleanup for a complete separated silhouette.",
+    "ghost.attack: Baked projectile/light swirls need extraction; confirm cloak edge during the cast.",
+    "crystal_sentinel.attack: Inspect spear tip and separate the cyan thrust trail from the source sprite.",
+    "slime_green.attack: Replacement removes cut body but differs in shading and volume from idle; unify before integration.",
+    "shadow_dragon.phase2_attack: Replacement articulation is clearer, but wingtip margins and scale continuity need retouching.",
+    "world.stage_map.path: Straight trail overlay crosses water and landmarks; author a route aligned to bridges and clearings."
+  ],
+  "duplicate_images": [
+    [
+      "ui.panel_math",
+      "ui.panel_reflex"
+    ],
+    [
+      "world.defeat.background",
+      "world.introduction.background"
+    ]
+  ],
+  "duplicates_note": "Static aliases and UI states can share pixels; repeated animation frames are errors.",
+  "assets": [
+    {
+      "id": "samuca.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.prepare",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.advance",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.attack",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.return",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.expression.happy",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.expression.determined",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.expression.surprised",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.expression.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.expression.victory",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "mushroom.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "mushroom.attack",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "mushroom.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "mushroom.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "mushroom.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_green.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_green.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_green.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_green.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_blue.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_blue.attack",
+      "errors": [],
+      "warnings": [
+        "Source includes large water trails across cell boundaries; separate and retouch effects before approval."
+      ],
+      "checked": true
+    },
+    {
+      "id": "slime_blue.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_blue.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_blue.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_bat.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_bat.attack",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_bat.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_bat.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_bat.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_spirit.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_spirit.attack",
+      "errors": [],
+      "warnings": [
+        "Vine reach approaches source cell boundaries; inspect branch tips and remove baked motion marks."
+      ],
+      "checked": true
+    },
+    {
+      "id": "forest_spirit.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_spirit.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_spirit.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_creature.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_creature.attack",
+      "errors": [],
+      "warnings": [
+        "Projectile streaks are baked into the source; detach projectile and confirm shard tips."
+      ],
+      "checked": true
+    },
+    {
+      "id": "crystal_creature.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_creature.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_creature.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_bat.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_bat.attack",
+      "errors": [],
+      "warnings": [
+        "Baked cyan sweep and source boundary overlap need cleanup for a complete separated silhouette."
+      ],
+      "checked": true
+    },
+    {
+      "id": "crystal_bat.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_bat.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_bat.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ghost.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ghost.attack",
+      "errors": [],
+      "warnings": [
+        "Baked projectile/light swirls need extraction; confirm cloak edge during the cast."
+      ],
+      "checked": true
+    },
+    {
+      "id": "ghost.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ghost.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ghost.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sentinel.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sentinel.attack",
+      "errors": [],
+      "warnings": [
+        "Inspect spear tip and separate the cyan thrust trail from the source sprite."
+      ],
+      "checked": true
+    },
+    {
+      "id": "crystal_sentinel.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sentinel.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sentinel.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "stone_guardian.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "stone_guardian.prepare",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "stone_guardian.ground_impact",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "stone_guardian.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "stone_guardian.posture_transition",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "stone_guardian.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "stone_guardian.entrance",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "stone_guardian.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.prepare",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.magic_attack",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.hurt",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.phase_transition",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.phase2_idle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.neutral",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "samuca.victory",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "slime_green.attack",
+      "errors": [],
+      "warnings": [
+        "Replacement removes cut body but differs in shading and volume from idle; unify before integration."
+      ],
+      "checked": true
+    },
+    {
+      "id": "samuca.defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "shadow_dragon.phase2_attack",
+      "errors": [],
+      "warnings": [
+        "Replacement articulation is clearer, but wingtip margins and scale continuity need retouching."
+      ],
+      "checked": true
+    },
+    {
+      "id": "ui.button_primary_normal",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.button_primary_hover",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.button_primary_pressed",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.button_primary_disabled",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.button_secondary_normal",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.button_secondary_hover",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.button_secondary_pressed",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.button_secondary_disabled",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.panel_battle",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.panel_math",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.panel_memory",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.panel_reflex",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.panel_menu",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.panel_victory",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.panel_defeat",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.panel_settings",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.sword",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.shield",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.crystal",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.star",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.star_empty",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.heart",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.potion",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.pause",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.timer",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.target",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.lock",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.check",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.gear",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.retry",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.sound",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.moon",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.hp_hero_frame",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.hp_hero_fill",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.hp_enemy_frame",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.hp_enemy_fill",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.hp_boss_frame",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.hp_boss_fill",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.timer_track",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.timer_fill",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.stage_normal",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.stage_locked",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.stage_completed",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.stage_boss",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.card_front",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.card_back",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.card_sword",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.card_shield",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.card_crystal",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.card_star",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.card_heart",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.card_potion",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.toggle_off",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.toggle_on",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.stars_frame",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_top_left",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_top",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_top_right",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_left",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_fill",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_right",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_bottom_left",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_bottom",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.slice_bottom_right",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "sword_slash.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "sword_slash.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "strong_attack.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "strong_attack.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "weak_attack.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "weak_attack.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "magic_impact.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "magic_impact.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "hero_damage.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "hero_damage.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enemy_defeat.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enemy_defeat.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "golem_attack.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "golem_attack.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "dragon_attack.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "dragon_attack.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "dragon_special.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "dragon_special.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "star_earned.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "star_earned.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "victory.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "victory.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_recovered.effect",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_recovered.reduced",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.distant",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.distant",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.distant",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.distant",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "world.stage_map.background",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "world.ending",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.prop_00",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.prop_01",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.prop_02",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.prop_03",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.prop_04",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.prop_05",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.midground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.scenery",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.ground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.foreground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "enchanted_forest.particles",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.prop_00",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.prop_01",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.prop_02",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.prop_03",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.prop_04",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.prop_05",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.midground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.scenery",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.ground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.foreground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "forest_ruins.particles",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.prop_00",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.prop_01",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.prop_02",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.prop_03",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.prop_04",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.prop_05",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.midground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.scenery",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.ground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.foreground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_cave.particles",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.prop_00",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.prop_01",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.prop_02",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.prop_03",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.prop_04",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.prop_05",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.midground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.scenery",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.ground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.foreground",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "crystal_sanctuary.particles",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "brand.logo",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "world.stage_map.path",
+      "errors": [],
+      "warnings": [
+        "Straight trail overlay crosses water and landmarks; author a route aligned to bridges and clearings."
+      ],
+      "checked": true
+    },
+    {
+      "id": "world.main_menu.background",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "world.victory.background",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "world.defeat.background",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "world.introduction.background",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    },
+    {
+      "id": "ui.menu_decorations",
+      "errors": [],
+      "warnings": [],
+      "checked": true
+    }
+  ],
+  "coverage": [
+    {
+      "requirement": "samuca.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "samuca.prepare",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "samuca.advance",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "samuca.attack",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "samuca.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "samuca.victory",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "samuca.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "samuca.return",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "slime_green.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "slime_green.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "needs_review",
+      "fulfilled": false
+    },
+    {
+      "requirement": "slime_green.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "slime_green.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "slime_blue.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "slime_blue.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "needs_review",
+      "fulfilled": false
+    },
+    {
+      "requirement": "slime_blue.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "slime_blue.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "mushroom.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "mushroom.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "mushroom.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "mushroom.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_bat.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_bat.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_bat.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_bat.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_spirit.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_spirit.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "needs_review",
+      "fulfilled": false
+    },
+    {
+      "requirement": "forest_spirit.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_spirit.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_creature.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_creature.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "needs_review",
+      "fulfilled": false
+    },
+    {
+      "requirement": "crystal_creature.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_creature.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_bat.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_bat.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "needs_review",
+      "fulfilled": false
+    },
+    {
+      "requirement": "crystal_bat.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_bat.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "ghost.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "ghost.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "needs_review",
+      "fulfilled": false
+    },
+    {
+      "requirement": "ghost.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "ghost.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sentinel.idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sentinel.attack",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "status": "needs_review",
+      "fulfilled": false
+    },
+    {
+      "requirement": "crystal_sentinel.hurt",
+      "expected_frames": 3,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sentinel.defeat",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "stone_guardian.idle",
+      "expected_frames": null,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "stone_guardian.prepare",
+      "expected_frames": null,
+      "actual_frames": 5,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "stone_guardian.ground_impact",
+      "expected_frames": null,
+      "actual_frames": 5,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "stone_guardian.hurt",
+      "expected_frames": null,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "stone_guardian.posture_transition",
+      "expected_frames": null,
+      "actual_frames": 6,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "stone_guardian.defeat",
+      "expected_frames": null,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "stone_guardian.entrance",
+      "expected_frames": null,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "shadow_dragon.idle",
+      "expected_frames": null,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "shadow_dragon.prepare",
+      "expected_frames": null,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "shadow_dragon.magic_attack",
+      "expected_frames": null,
+      "actual_frames": 5,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "shadow_dragon.hurt",
+      "expected_frames": null,
+      "actual_frames": 3,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "shadow_dragon.phase_transition",
+      "expected_frames": null,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "shadow_dragon.phase2_idle",
+      "expected_frames": null,
+      "actual_frames": 4,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "shadow_dragon.phase2_attack",
+      "expected_frames": null,
+      "actual_frames": 5,
+      "status": "needs_review",
+      "fulfilled": false
+    },
+    {
+      "requirement": "shadow_dragon.defeat",
+      "expected_frames": null,
+      "actual_frames": 7,
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "enchanted_forest.distant",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "enchanted_forest.midground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "enchanted_forest.scenery",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "enchanted_forest.ground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "enchanted_forest.foreground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "enchanted_forest.particles",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_ruins.distant",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_ruins.midground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_ruins.scenery",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_ruins.ground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_ruins.foreground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "forest_ruins.particles",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_cave.distant",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_cave.midground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_cave.scenery",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_cave.ground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_cave.foreground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_cave.particles",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sanctuary.distant",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sanctuary.midground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sanctuary.scenery",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sanctuary.ground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sanctuary.foreground",
+      "status": "ready",
+      "fulfilled": true
+    },
+    {
+      "requirement": "crystal_sanctuary.particles",
+      "status": "ready",
+      "fulfilled": true
+    }
+  ],
+  "all_technical_checks_passed": true,
+  "visual_approval_is_separate": true,
+  "limitations": [
+    "Anatomical fidelity, pose semantics, parallax seams and clipped source anatomy require visual inspection.",
+    "No supplied game code was run; Phaser integration examples are prepared, not a game regression test."
+  ]
+}

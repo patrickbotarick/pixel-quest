@@ -1,0 +1,14 @@
+{
+  "assets": 183,
+  "spritesheets": 75,
+  "animation_frames": 374,
+  "png_files": 557,
+  "copied_files_verified": 648,
+  "file_bytes": 6383483,
+  "decoded_texture_bytes_estimate": 150074944,
+  "unapproved_assets_in_dist": 0,
+  "missing_paths": 0,
+  "zip_bytes": 5901019,
+  "zip_sha256": "9dede786aa8241ae25f18f2b79e38ffab8c4d23192fa36a5099a612b82c42e06",
+  "zip_integrity_test": "pass"
+}

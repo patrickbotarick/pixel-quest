@@ -1,0 +1,32 @@
+{
+  "key": "shadow_dragon.idle",
+  "texture_key": "shadow_dragon.idle",
+  "texture_path": "04_bosses/shadow_dragon/animations/shadow_dragon_idle.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "startFrame": 0,
+    "endFrame": 3,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "shadow_dragon.idle",
+    "start": 0,
+    "end": 3,
+    "frameRate": 7,
+    "repeat": -1
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_idle_00.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_idle_01.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_idle_02.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_idle_03.png"
+  ],
+  "production_status": "ready"
+}

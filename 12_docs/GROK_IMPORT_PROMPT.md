@@ -1,0 +1,17 @@
+# Prompt para Grok Build
+
+Integre o pacote aprovado Pixel Quest Asset Factory v1.0 no jogo Phaser 3 já existente, Pixel Quest: Aventura dos Desafios. O protagonista é Samuca. Esta tarefa é substituição de arte; preserve integralmente as mecânicas, lógica de combate, resolução de desafios, pontuação, saves, progressão, matemática, memória, reflexo e regras dos chefes.
+
+Antes de modificar, crie backup verificável ou branch de trabalho e execute o build atual. Registre o comportamento de referência das dez fases, menu, configuração, vitória, derrota e encerramento. Não recrie o jogo. Não substitua a identidade oficial de Samuca.
+
+Receba o conteúdo de dist/ ou pixel_quest_approved_assets_v1.zip e leia assets.manifest.json. Importe exclusivamente entradas ready. Não use o manifesto completo do workspace para importar fontes, referências, GIFs, previews ou necessidades de revisão. Preserve sprites atuais como fallback com chaves distintas. Não importe animações pendentes de ataque de inimigos nem o ataque novo da segunda fase do Dragão antes de aprovação. Se um recurso não estiver no pacote, mantenha a arte atual correspondente.
+
+Integre por etapas pequenas e reversíveis: UI/cartas, Samuca, Cogumelo Travesso na fase 3, demais animações aprovadas e VFX, cenários, chefes, mapa e telas. Em cada etapa confira alpha, dimensões e enquadramento. Samuca usa frames 128×128; inimigos 96×96; Guardião 192×192; Dragão 256×256. Spritesheets são linhas de frames numéricos de 0 a N−1, sem margin/spacing. Use FPS e repeat do manifesto; idle repete, demais animações executam uma vez. Personagens usam origem (0.5,0.9375); VFX usam centro; camadas usam (0,0). Aplique nearest-neighbor/pixelArt e evite interpolação borrada.
+
+Dispare animações e efeitos a partir dos eventos já existentes, mantendo tempos e regras de combate. Não calcule dano ou progressão por duração dos frames. A transição do Dragão deve mudar para a aparência cristalizada quando a lógica existente entrar na segunda fase; não altere seu gatilho ou atributos. Use o ataque antigo de segunda fase como fallback enquanto o novo não estiver aprovado.
+
+Monte cenários pela ordem de seis camadas descrita em metadata/layers.json. Mantenha personagens separados e preserve a área de desafios. Use parallax limitado; não suponha rolagem infinita sem costura. Separe molduras/HP fills, desenhe textos dinamicamente e use nine-slice ou as nove partes. No mapa, leia stages.json e desenhe números e ícones interativos separadamente; fases 5 e 10 são chefes. O trajeto ilustrado ainda está em revisão: preserve o caminho atual ou use renderer dinâmico alinhado às coordenadas.
+
+Garanta funcionamento mobile em retrato e paisagem: alvos mínimos de 44 pixels CSS, painel de desafio legível, cartas com contraste, escala consistente, botão de pausa acessível, ausência de corte e carregamento por fase. Use VFX reduzidos conforme as configurações de acessibilidade existentes; evite estrobo, flashes intensos ou shake excessivo.
+
+Execute testes de regressão dos sistemas existentes: acerto/erro e dano, matemática, memória e pares, reflexo e cronômetro, pausa, configurações, saves, desbloqueio de fases, estrelas, derrota/retry, vitória, chefes nas fases 5 e 10 e segunda fase do Dragão. Compare com o backup. Verifique console, caminhos ausentes, memória de texturas e orientação em dispositivos reais. Execute o build de produção e informe alterações, assets substituídos, fallbacks mantidos, resultados reais e pendências. Não invente testes. Não publique ou faça deploy automaticamente.

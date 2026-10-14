@@ -1,0 +1,32 @@
+{
+  "key": "shadow_dragon.prepare",
+  "texture_key": "shadow_dragon.prepare",
+  "texture_path": "04_bosses/shadow_dragon/animations/shadow_dragon_prepare.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "startFrame": 0,
+    "endFrame": 3,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "shadow_dragon.prepare",
+    "start": 0,
+    "end": 3,
+    "frameRate": 8,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_prepare_00.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_prepare_01.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_prepare_02.png",
+    "04_bosses/shadow_dragon/sprites/shadow_dragon_prepare_03.png"
+  ],
+  "production_status": "ready"
+}

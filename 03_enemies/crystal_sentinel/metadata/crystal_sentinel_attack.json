@@ -1,0 +1,33 @@
+{
+  "key": "crystal_sentinel.attack",
+  "texture_key": "crystal_sentinel.attack",
+  "texture_path": "03_enemies/crystal_sentinel/animations/crystal_sentinel_attack.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 96,
+    "frameHeight": 96,
+    "startFrame": 0,
+    "endFrame": 4,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "crystal_sentinel.attack",
+    "start": 0,
+    "end": 4,
+    "frameRate": 10,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_attack_00.png",
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_attack_01.png",
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_attack_02.png",
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_attack_03.png",
+    "03_enemies/crystal_sentinel/sprites/crystal_sentinel_attack_04.png"
+  ],
+  "production_status": "needs_review"
+}

@@ -1,0 +1,39 @@
+{
+  "all_passed": true,
+  "results": [
+    {
+      "test": "compose_equal_frames",
+      "pass": true,
+      "exit_code": 0
+    },
+    {
+      "test": "extract_uniform_grid",
+      "pass": true,
+      "exit_code": 0
+    },
+    {
+      "test": "compose_extract_pixel_roundtrip",
+      "pass": true
+    },
+    {
+      "test": "reject_incompatible_grid",
+      "pass": true,
+      "exit_code": 2
+    },
+    {
+      "test": "reject_mixed_frame_sizes",
+      "pass": true,
+      "exit_code": 2
+    },
+    {
+      "test": "preview_generation",
+      "pass": true,
+      "exit_code": 0
+    },
+    {
+      "test": "preview_integrity_two_frames",
+      "pass": true
+    }
+  ],
+  "temporary_cleanup": "isolated TemporaryDirectory within workspace/tmp; resolved path checked before cleanup"
+}

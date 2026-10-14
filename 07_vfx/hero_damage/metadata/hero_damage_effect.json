@@ -1,0 +1,36 @@
+{
+  "key": "hero_damage.effect",
+  "texture_key": "hero_damage.effect",
+  "texture_path": "07_vfx/hero_damage/animations/hero_damage_effect.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "startFrame": 0,
+    "endFrame": 7,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "hero_damage.effect",
+    "start": 0,
+    "end": 7,
+    "frameRate": 14,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "individual_frames": [
+    "07_vfx/hero_damage/sprites/hero_damage_effect_00.png",
+    "07_vfx/hero_damage/sprites/hero_damage_effect_01.png",
+    "07_vfx/hero_damage/sprites/hero_damage_effect_02.png",
+    "07_vfx/hero_damage/sprites/hero_damage_effect_03.png",
+    "07_vfx/hero_damage/sprites/hero_damage_effect_04.png",
+    "07_vfx/hero_damage/sprites/hero_damage_effect_05.png",
+    "07_vfx/hero_damage/sprites/hero_damage_effect_06.png",
+    "07_vfx/hero_damage/sprites/hero_damage_effect_07.png"
+  ],
+  "production_status": "ready"
+}

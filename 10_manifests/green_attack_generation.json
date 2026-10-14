@@ -1,0 +1,19 @@
+{
+  "id": "slime_green_attack",
+  "asset_id": "slime_green",
+  "source": "03_enemies/slime_green/references/generated_attack_source.png",
+  "category": "03_enemies",
+  "columns": 5,
+  "rows": 1,
+  "size": 96,
+  "specs": [
+    [
+      "attack",
+      5,
+      10,
+      false
+    ]
+  ],
+  "prompt": "Pixel Quest ORIGINAL green leaf slime from style of official reference, emerald jelly creature leafy antenna pale lime belly glossy highlights expressive dark eyes; premium crisp16-bit pixel art. Create exactly FIVE independent attack frames in a SINGLE HORIZONTAL ROW on a wide canvas, all full isolated with very generous blank margins (20%) between poses. Transparent background, no effects outside body no detached droplets/rays, NO text/grid. Same scale each frame. 1 crouches coiling jelly body,2 draws leafy crest back,3 elongated forward lunge with face facingRIGHT,4 squashed forward landing,5 rounded recovery. Whole body/leaf entirely visible. Never overlap poses, every frame different body articulation not translation. This is an attack animation, no idle hurt defeat additional sprites. Equal five cells across one row, body center y60% baseline75%, blank above and below. Intended96x96export.",
+  "local_source": "03_enemies/slime_green/references/generated_attack_source.png"
+}

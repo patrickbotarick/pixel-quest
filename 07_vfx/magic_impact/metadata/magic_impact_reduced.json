@@ -1,0 +1,34 @@
+{
+  "key": "magic_impact.reduced",
+  "texture_key": "magic_impact.reduced",
+  "texture_path": "07_vfx/magic_impact/animations/magic_impact_reduced.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "startFrame": 0,
+    "endFrame": 5,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "magic_impact.reduced",
+    "start": 0,
+    "end": 5,
+    "frameRate": 12,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "individual_frames": [
+    "07_vfx/magic_impact/sprites/magic_impact_reduced_00.png",
+    "07_vfx/magic_impact/sprites/magic_impact_reduced_01.png",
+    "07_vfx/magic_impact/sprites/magic_impact_reduced_02.png",
+    "07_vfx/magic_impact/sprites/magic_impact_reduced_03.png",
+    "07_vfx/magic_impact/sprites/magic_impact_reduced_04.png",
+    "07_vfx/magic_impact/sprites/magic_impact_reduced_05.png"
+  ],
+  "production_status": "ready"
+}

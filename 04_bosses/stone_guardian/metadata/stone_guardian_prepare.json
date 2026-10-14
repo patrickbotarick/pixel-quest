@@ -1,0 +1,33 @@
+{
+  "key": "stone_guardian.prepare",
+  "texture_key": "stone_guardian.prepare",
+  "texture_path": "04_bosses/stone_guardian/animations/stone_guardian_prepare.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 192,
+    "frameHeight": 192,
+    "startFrame": 0,
+    "endFrame": 4,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "stone_guardian.prepare",
+    "start": 0,
+    "end": 4,
+    "frameRate": 8,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "04_bosses/stone_guardian/sprites/stone_guardian_prepare_00.png",
+    "04_bosses/stone_guardian/sprites/stone_guardian_prepare_01.png",
+    "04_bosses/stone_guardian/sprites/stone_guardian_prepare_02.png",
+    "04_bosses/stone_guardian/sprites/stone_guardian_prepare_03.png",
+    "04_bosses/stone_guardian/sprites/stone_guardian_prepare_04.png"
+  ],
+  "production_status": "ready"
+}

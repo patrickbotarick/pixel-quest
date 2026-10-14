@@ -1,0 +1,33 @@
+{
+  "key": "slime_green.attack",
+  "texture_key": "slime_green.attack",
+  "texture_path": "03_enemies/slime_green/animations/slime_green_attack.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 96,
+    "frameHeight": 96,
+    "startFrame": 0,
+    "endFrame": 4,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "slime_green.attack",
+    "start": 0,
+    "end": 4,
+    "frameRate": 10,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "03_enemies/slime_green/sprites/slime_green_attack_00.png",
+    "03_enemies/slime_green/sprites/slime_green_attack_01.png",
+    "03_enemies/slime_green/sprites/slime_green_attack_02.png",
+    "03_enemies/slime_green/sprites/slime_green_attack_03.png",
+    "03_enemies/slime_green/sprites/slime_green_attack_04.png"
+  ],
+  "production_status": "needs_review"
+}

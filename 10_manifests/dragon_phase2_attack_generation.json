@@ -1,0 +1,19 @@
+{
+  "id": "shadow_dragon_phase2_attack",
+  "asset_id": "shadow_dragon",
+  "source": "04_bosses/shadow_dragon/references/generated_phase2_attack_source.png",
+  "category": "04_bosses",
+  "columns": 5,
+  "rows": 1,
+  "size": 256,
+  "specs": [
+    [
+      "phase2_attack",
+      5,
+      10,
+      false
+    ]
+  ],
+  "prompt": "Image1 official reference gives premium crisp16-bit pixel art STYLE. Image2 is EXACT Shadow Dragon identity to preserve: indigo violet body silver horns cyan eyes segmented cream belly curled shard tail, PHASE2 has bright cyan crystalline shoulder/neck armor crown and blue luminous veins across violet wings. Create ONLY5 attack frames of this same phase2 dragon, facingRIGHT, single horizontal row of FIVE equal isolated cells on wide3:1 canvas. Very generous15% empty margins, whole tail/wings/horns/claws inside each cell, sprites never touch or overlap. Transparent background no text/grid/floor/shadows.1 crouches drawing head back and folding wings,2 raises chest jaw opens charging,3 head and claw thrust forward magic casting but NO drawn projectile,4 body follows through wings spread,5 recovers to standing wingfold idle. Every frame distinct coherent articulation. No separate effects outside dragon; magic projectile is separate VFX. Preserve exact dragon proportions, anatomy and phase2 crystalline armor in ALL5 frames, no redesign, no copying identical poses. Designed256x256 export.",
+  "local_source": "04_bosses/shadow_dragon/references/generated_phase2_attack_source.png"
+}

@@ -1,0 +1,535 @@
+[
+  {
+    "requirement": "samuca.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "samuca.prepare",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "samuca.advance",
+    "expected_frames": 6,
+    "actual_frames": 6,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "samuca.attack",
+    "expected_frames": 6,
+    "actual_frames": 6,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "samuca.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "samuca.victory",
+    "expected_frames": 6,
+    "actual_frames": 6,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "samuca.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "samuca.return",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "slime_green.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "slime_green.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "needs_review",
+    "fulfilled": false
+  },
+  {
+    "requirement": "slime_green.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "slime_green.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "slime_blue.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "slime_blue.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "needs_review",
+    "fulfilled": false
+  },
+  {
+    "requirement": "slime_blue.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "slime_blue.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "mushroom.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "mushroom.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "mushroom.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "mushroom.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_bat.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_bat.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_bat.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_bat.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_spirit.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_spirit.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "needs_review",
+    "fulfilled": false
+  },
+  {
+    "requirement": "forest_spirit.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_spirit.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_creature.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_creature.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "needs_review",
+    "fulfilled": false
+  },
+  {
+    "requirement": "crystal_creature.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_creature.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_bat.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_bat.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "needs_review",
+    "fulfilled": false
+  },
+  {
+    "requirement": "crystal_bat.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_bat.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "ghost.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "ghost.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "needs_review",
+    "fulfilled": false
+  },
+  {
+    "requirement": "ghost.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "ghost.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sentinel.idle",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sentinel.attack",
+    "expected_frames": 5,
+    "actual_frames": 5,
+    "status": "needs_review",
+    "fulfilled": false
+  },
+  {
+    "requirement": "crystal_sentinel.hurt",
+    "expected_frames": 3,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sentinel.defeat",
+    "expected_frames": 4,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "stone_guardian.idle",
+    "expected_frames": null,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "stone_guardian.prepare",
+    "expected_frames": null,
+    "actual_frames": 5,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "stone_guardian.ground_impact",
+    "expected_frames": null,
+    "actual_frames": 5,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "stone_guardian.hurt",
+    "expected_frames": null,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "stone_guardian.posture_transition",
+    "expected_frames": null,
+    "actual_frames": 6,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "stone_guardian.defeat",
+    "expected_frames": null,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "stone_guardian.entrance",
+    "expected_frames": null,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "shadow_dragon.idle",
+    "expected_frames": null,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "shadow_dragon.prepare",
+    "expected_frames": null,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "shadow_dragon.magic_attack",
+    "expected_frames": null,
+    "actual_frames": 5,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "shadow_dragon.hurt",
+    "expected_frames": null,
+    "actual_frames": 3,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "shadow_dragon.phase_transition",
+    "expected_frames": null,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "shadow_dragon.phase2_idle",
+    "expected_frames": null,
+    "actual_frames": 4,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "shadow_dragon.phase2_attack",
+    "expected_frames": null,
+    "actual_frames": 5,
+    "status": "needs_review",
+    "fulfilled": false
+  },
+  {
+    "requirement": "shadow_dragon.defeat",
+    "expected_frames": null,
+    "actual_frames": 7,
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "enchanted_forest.distant",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "enchanted_forest.midground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "enchanted_forest.scenery",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "enchanted_forest.ground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "enchanted_forest.foreground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "enchanted_forest.particles",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_ruins.distant",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_ruins.midground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_ruins.scenery",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_ruins.ground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_ruins.foreground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "forest_ruins.particles",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_cave.distant",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_cave.midground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_cave.scenery",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_cave.ground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_cave.foreground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_cave.particles",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sanctuary.distant",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sanctuary.midground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sanctuary.scenery",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sanctuary.ground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sanctuary.foreground",
+    "status": "ready",
+    "fulfilled": true
+  },
+  {
+    "requirement": "crystal_sanctuary.particles",
+    "status": "ready",
+    "fulfilled": true
+  }
+]

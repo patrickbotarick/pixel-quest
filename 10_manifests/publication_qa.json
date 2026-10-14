@@ -1,0 +1,15 @@
+{
+  "all_passed": true,
+  "assets": 221,
+  "statuses": {
+    "ready": 183,
+    "needs_review": 38
+  },
+  "relative_asset_paths": 801,
+  "portable_sources": 26,
+  "approved_hashes_verified": 183,
+  "viewer_manifest_matches": true,
+  "dist_pngs_verified": 557,
+  "zip_entries_verified": 649,
+  "art_generation_executed": false
+}

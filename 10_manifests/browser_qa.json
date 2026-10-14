@@ -1,0 +1,17 @@
+{
+  "page": "http://127.0.0.1:8766/09_previews/index.html",
+  "manifest_status_counts_observed": {"ready":183,"needs_review":38},
+  "texture_load_test": {"loaded":221,"expected":221,"dimensions_correct":true,"failures":0},
+  "controls": {
+    "pause": "pass: button changed to Reproduzir",
+    "scale": "pass: Samuca 128px at scale2 rendered in 256px canvas",
+    "background": "pass: stage light applied",
+    "frame_step": "pass: frame slider moved from0 to1",
+    "entity_and_animation": "pass: mushroom.attack,96x96,5frames,10FPS,single execution",
+    "environment_layers": "pass: crystal_cave foreground hidden then restored"
+  },
+  "console_errors": [],
+  "small_viewport": {"requested":{"width":375,"height":812},"observed_document_css_width":360,"observed_content_css_width":360,"player_grid_columns":"306px","horizontal_document_overflow":false,"note":"Preview responsive layout only; not a mobile game benchmark. The host returned360CSS pixels for the requested override."},
+  "viewport_override_reset":true,
+  "scope":"Local asset viewer; no original game was supplied or run"
+}

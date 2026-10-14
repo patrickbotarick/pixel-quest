@@ -1,0 +1,19 @@
+{
+  "id": "samuca_victory",
+  "asset_id": "samuca",
+  "source": "02_characters/samuca/references/generated_victory_source.png",
+  "category": "02_characters",
+  "columns": 3,
+  "rows": 2,
+  "size": 96,
+  "specs": [
+    [
+      "victory",
+      6,
+      9,
+      false
+    ]
+  ],
+  "prompt": "Production animation spritesheet ONLY Samuca victory from provided official identity reference. SAME brown hair small gold lock big eyes blue tunic gold trim green cape brown boots. Exactly SIX full sprites in a STRICT3columns x2rows equal-cell grid, no more no less. Transparent background. Premium crisp16-bit pixel art, designed for96x96frames. Samuca has exactly ONE short metallic sword in RIGHT hand in each frame; left hand EMPTY in joyful fist. No other sword at belt, no duplicated weapons. Frame1 starts raising sword, frame2 sword overhead open eyes smile, frame3 fist pumps, frame4 knees bend for little happy hop, frame5 mid-hop cape flies eyes happy closed, frame6 lands cheerful ready to return idle. Consistent head/body proportions and scale, facing right3/4, precise uniform baseline; all sword cape hair entire inside generous15% cell margins. NO stars or marks around head, NO decorative sheet border, NO text/grid/ground/shadows. Every frame truly articulated distinct limb pose; preserve official character face and costume.",
+  "local_source": "02_characters/samuca/references/generated_victory_source.png"
+}

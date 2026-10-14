@@ -1,0 +1,32 @@
+{
+  "key": "slime_blue.defeat",
+  "texture_key": "slime_blue.defeat",
+  "texture_path": "03_enemies/slime_blue/animations/slime_blue_defeat.png",
+  "layout": "grid",
+  "frameConfig": {
+    "frameWidth": 96,
+    "frameHeight": 96,
+    "startFrame": 0,
+    "endFrame": 3,
+    "margin": 0,
+    "spacing": 0
+  },
+  "animation": {
+    "key": "slime_blue.defeat",
+    "start": 0,
+    "end": 3,
+    "frameRate": 7,
+    "repeat": 0
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.9375
+  },
+  "individual_frames": [
+    "03_enemies/slime_blue/sprites/slime_blue_defeat_00.png",
+    "03_enemies/slime_blue/sprites/slime_blue_defeat_01.png",
+    "03_enemies/slime_blue/sprites/slime_blue_defeat_02.png",
+    "03_enemies/slime_blue/sprites/slime_blue_defeat_03.png"
+  ],
+  "production_status": "ready"
+}
